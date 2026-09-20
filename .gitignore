@@ -1,0 +1,9 @@
+.DS_Store
+target/
+*.docx
+*.pages
+md-extract/
+.private/
+*.env
+.idea/
+.vscode/
