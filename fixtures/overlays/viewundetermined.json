@@ -1,0 +1,11 @@
+{
+  "id": "viewundetermined",
+  "requirements": [
+    {
+      "id": "vu.url",
+      "kind": "viewundetermined",
+      "values": ["https://t.example.com/vu"],
+      "message": "this overlay requires ViewUndetermined https://t.example.com/vu. Missing ViewUndetermined fails closed. Builtin packs do not pin ViewUndetermined URLs."
+    }
+  ]
+}

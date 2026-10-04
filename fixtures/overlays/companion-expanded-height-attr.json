@@ -1,0 +1,11 @@
+{
+  "id": "companion-expanded-height-attr",
+  "requirements": [
+    {
+      "id": "comp.eh",
+      "kind": "companion_expanded_height",
+      "values": ["500"],
+      "message": "this overlay requires Companion expandedHeight 500. Missing Companion or expandedHeight fails closed. Distinct from the W10 min_companion_expanded_height bound. Builtin packs do not pin Companion expandedHeight."
+    }
+  ]
+}

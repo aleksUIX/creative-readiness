@@ -1,0 +1,11 @@
+{
+  "id": "companion-id",
+  "requirements": [
+    {
+      "id": "comp.id",
+      "kind": "companion_id",
+      "values": ["comp-1"],
+      "message": "this overlay requires Companion id comp-1. Missing Companion or id fails closed. Builtin packs do not pin Companion id."
+    }
+  ]
+}

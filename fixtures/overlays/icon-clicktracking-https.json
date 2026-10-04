@@ -1,0 +1,10 @@
+{
+  "id": "icon-clicktracking-https",
+  "requirements": [
+    {
+      "id": "ictk.https",
+      "kind": "icon_clicktracking_https",
+      "message": "this overlay requires every IconClickTracking URL to be HTTPS when IconClickTracking is present. Missing IconClickTracking passes. Builtin packs do not pin IconClickTracking HTTPS as a separate kind."
+    }
+  ]
+}

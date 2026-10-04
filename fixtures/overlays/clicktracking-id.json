@@ -1,0 +1,11 @@
+{
+  "id": "clicktracking-id",
+  "requirements": [
+    {
+      "id": "clk.id",
+      "kind": "clicktracking_id",
+      "values": ["clk-1"],
+      "message": "this overlay requires ClickTracking id clk-1. Missing ClickTracking or id fails closed. Builtin packs do not pin ClickTracking id."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "blocked-ad-categories-authority",
+  "requirements": [
+    {
+      "id": "blocked.auth",
+      "kind": "blocked_ad_categories_authority",
+      "values": ["IAB"],
+      "message": "this overlay requires BlockedAdCategories authority IAB. Missing BlockedAdCategories or authority fails closed. Builtin packs do not pin BlockedAdCategories authority."
+    }
+  ]
+}

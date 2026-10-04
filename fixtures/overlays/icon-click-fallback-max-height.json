@@ -1,0 +1,11 @@
+{
+  "id": "icon-click-fallback-max-height",
+  "requirements": [
+    {
+      "id": "fb.max-h",
+      "kind": "max_icon_click_fallback_height",
+      "max": 20,
+      "message": "this overlay requires an IconClickFallbackImage at most 20 pixels tall. Missing IconClickFallbackImage or height fails closed. Joins sibling min IconClickFallbackImage size and sibling max_icon_click_fallback_width on one IconClickFallbackImage. Distinct from min_icon_click_fallback_height. Builtin packs do not pin an IconClickFallbackImage height cap."
+    }
+  ]
+}

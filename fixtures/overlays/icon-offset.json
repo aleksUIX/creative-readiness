@@ -1,0 +1,11 @@
+{
+  "id": "icon-offset",
+  "requirements": [
+    {
+      "id": "icon.off",
+      "kind": "icon_offset",
+      "values": ["00:00:00"],
+      "message": "this overlay requires Icon offset 00:00:00. Missing Icon or offset fails closed. Builtin packs do not pin Icon offset."
+    }
+  ]
+}

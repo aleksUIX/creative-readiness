@@ -1,0 +1,11 @@
+{
+  "id": "mediafile-media-type",
+  "requirements": [
+    {
+      "id": "mf.mt",
+      "kind": "mediafile_media_type",
+      "values": ["2D"],
+      "message": "this overlay requires MediaFile mediaType 2D. Missing MediaFile or mediaType fails closed. Builtin packs do not pin MediaFile mediaType."
+    }
+  ]
+}

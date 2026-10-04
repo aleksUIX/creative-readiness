@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creative-readiness.dev/schemas/eligibility.json",
+  "title": "Eligibility",
+  "description": "W2 Option B/C. Same creative can be operationally ready and ineligible for this break, publisher, or event.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["ready_ref", "context", "eligible", "reasons"],
+  "properties": {
+    "ready_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_version", "expires_at"],
+      "properties": {
+        "fingerprint": {
+          "type": "string",
+          "pattern": "^(hash|url):.+"
+        },
+        "evidence_version": { "type": "string", "minLength": 1 },
+        "expires_at": { "type": "string", "format": "date-time" }
+      }
+    },
+    "context": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/opportunity"
+    },
+    "eligible": { "type": "boolean" },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/finding"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "static-resource-https",
+  "requirements": [
+    {
+      "id": "static.https",
+      "kind": "static_resource_https",
+      "message": "this overlay requires StaticResource URLs to be HTTPS when present. Builtin packs do not add this kind."
+    }
+  ]
+}

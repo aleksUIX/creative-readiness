@@ -1,0 +1,13 @@
+{
+  "id": "expired-pack",
+  "version": "0.0.1",
+  "architecture": "ssai",
+  "expires_at": "2020-01-01T00:00:00Z",
+  "requirements": [
+    {
+      "id": "expired-pack.https",
+      "kind": "media_https",
+      "message": "expired pack still requires HTTPS."
+    }
+  ]
+}

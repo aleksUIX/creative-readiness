@@ -1,0 +1,11 @@
+{
+  "id": "icon-viewtracking",
+  "requirements": [
+    {
+      "id": "ivt.url",
+      "kind": "icon_viewtracking",
+      "values": ["https://t.example.com/iv"],
+      "message": "this overlay requires IconViewTracking https://t.example.com/iv. Missing IconViewTracking fails closed. Builtin packs do not pin IconViewTracking URLs."
+    }
+  ]
+}

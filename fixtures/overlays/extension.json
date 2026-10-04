@@ -1,0 +1,11 @@
+{
+  "id": "extension",
+  "requirements": [
+    {
+      "id": "ext.url",
+      "kind": "extension",
+      "values": ["https://t.example.com/ext"],
+      "message": "this overlay requires Extension https://t.example.com/ext. Missing Extension fails closed. Builtin packs do not pin Extension URLs."
+    }
+  ]
+}

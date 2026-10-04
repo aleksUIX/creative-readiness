@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creative-readiness.dev/schemas/creative-identity.json",
+  "title": "CreativeIdentity",
+  "description": "How we know it is the same asset. crid and dsp/ssp ids are aliases. Fingerprint is media identity.",
+  "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/identity"
+}

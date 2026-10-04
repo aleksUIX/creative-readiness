@@ -1,0 +1,11 @@
+{
+  "id": "ad-serving-id",
+  "requirements": [
+    {
+      "id": "asid.txt",
+      "kind": "ad_serving_id",
+      "values": ["srv-001"],
+      "message": "this overlay requires AdServingId srv-001. Missing AdServingId fails closed. Builtin packs do not pin AdServingId text."
+    }
+  ]
+}

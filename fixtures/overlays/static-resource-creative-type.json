@@ -1,0 +1,11 @@
+{
+  "id": "static-resource-creative-type",
+  "requirements": [
+    {
+      "id": "static.ct",
+      "kind": "static_resource_creative_type",
+      "values": ["image/png"],
+      "message": "this overlay requires StaticResource creativeType image/png. Missing StaticResource or creativeType fails closed. Builtin packs do not pin StaticResource creativeType."
+    }
+  ]
+}

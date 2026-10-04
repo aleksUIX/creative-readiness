@@ -1,0 +1,11 @@
+{
+  "id": "companion-height",
+  "requirements": [
+    {
+      "id": "companion.height",
+      "kind": "min_companion_height",
+      "min": 250,
+      "message": "this overlay requires a Companion at least 250 pixels tall. Builtin packs do not require companions."
+    }
+  ]
+}

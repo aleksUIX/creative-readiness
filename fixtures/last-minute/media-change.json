@@ -1,0 +1,10 @@
+{
+  "id": "w20-media-change",
+  "old": "ok-https-mp4.xml",
+  "new": "ok-mezzanine-new-media.xml",
+  "expect": {
+    "tracking_only": false,
+    "keep_transcode": false,
+    "invalidation_ids": ["diff.media-changed"]
+  }
+}

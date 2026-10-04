@@ -1,0 +1,11 @@
+{
+  "id": "nonlinear-maintain-aspect-ratio",
+  "requirements": [
+    {
+      "id": "nl.mar",
+      "kind": "nonlinear_maintain_aspect_ratio",
+      "values": ["true"],
+      "message": "this overlay requires NonLinear maintainAspectRatio true. Missing NonLinear or maintainAspectRatio fails closed. Builtin packs do not pin NonLinear maintainAspectRatio."
+    }
+  ]
+}

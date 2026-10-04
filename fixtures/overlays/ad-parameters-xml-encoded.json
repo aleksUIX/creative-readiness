@@ -1,0 +1,11 @@
+{
+  "id": "ad-parameters-xml-encoded",
+  "requirements": [
+    {
+      "id": "params.xml",
+      "kind": "ad_parameters_xml_encoded",
+      "values": ["true"],
+      "message": "this overlay requires AdParameters xmlEncoded true. Missing AdParameters or xmlEncoded fails closed. Builtin packs do not pin AdParameters xmlEncoded."
+    }
+  ]
+}

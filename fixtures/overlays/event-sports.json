@@ -1,0 +1,12 @@
+{
+  "id": "event-sports",
+  "event_id": "game-1",
+  "requirements": [
+    {
+      "id": "event-sports.max-duration",
+      "kind": "max_duration_seconds",
+      "max": 15,
+      "message": "this live sports overlay caps Linear duration at 15 seconds."
+    }
+  ]
+}

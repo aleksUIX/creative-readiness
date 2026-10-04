@@ -1,0 +1,22 @@
+{
+  "id": "bid-1",
+  "imp": [
+    {
+      "id": "1",
+      "video": { "maxduration": 15, "mimes": ["video/mp4"] }
+    }
+  ],
+  "site": { "publisher": { "id": "pub-1" } },
+  "seatbid": [
+    {
+      "bid": [
+        {
+          "id": "b1",
+          "crid": "crid-9",
+          "dealid": "deal-9",
+          "ext": { "fallback_crid": "house-1" }
+        }
+      ]
+    }
+  ]
+}

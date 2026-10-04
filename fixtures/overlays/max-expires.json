@@ -1,0 +1,11 @@
+{
+  "id": "max-expires",
+  "requirements": [
+    {
+      "id": "expires.max",
+      "kind": "max_expires_seconds",
+      "max": 7200,
+      "message": "this overlay requires Expires at most 7200 seconds. Builtin packs do not bound Expires."
+    }
+  ]
+}

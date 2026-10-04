@@ -1,0 +1,11 @@
+{
+  "id": "icon-clickfallback",
+  "requirements": [
+    {
+      "id": "icfb.url",
+      "kind": "icon_clickfallback",
+      "values": ["https://cdn.example.com/icon.png"],
+      "message": "this overlay requires IconClickFallbackImage https://cdn.example.com/icon.png. Missing IconClickFallbackImage fails closed. Builtin packs do not pin IconClickFallbackImage URLs."
+    }
+  ]
+}

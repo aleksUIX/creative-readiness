@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creative-readiness.dev/schemas/observation.json",
+  "title": "Observation",
+  "description": "Auction-triggered input. Seller treatment is declared by the seller. The module does not choose serve vs fallback.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["treatment"],
+  "properties": {
+    "vast_xml": { "type": "string", "minLength": 1 },
+    "identity": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/identity"
+    },
+    "pack": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/pack"
+    },
+    "treatment": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/sellerTreatment"
+    },
+    "pattern": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/observePattern"
+    },
+    "won": { "type": "boolean" },
+    "authority_id": { "type": "string", "minLength": 1 },
+    "auction_context": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/auctionContext"
+    },
+    "openrtb_json": {
+      "type": "string",
+      "minLength": 2,
+      "description": "Raw OpenRTB 2.x bid-response JSON. Parsed into auction_context. Not a pacing engine."
+    },
+    "overlays": {
+      "type": "array",
+      "items": {
+        "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/policyOverlay"
+      }
+    }
+  }
+}

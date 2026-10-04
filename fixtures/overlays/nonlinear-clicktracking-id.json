@@ -1,0 +1,11 @@
+{
+  "id": "nonlinear-clicktracking-id",
+  "requirements": [
+    {
+      "id": "nlct.id",
+      "kind": "nonlinear_clicktracking_id",
+      "values": ["nlct-1"],
+      "message": "this overlay requires NonLinearClickTracking id nlct-1. Missing NonLinearClickTracking or id fails closed. Builtin packs do not pin NonLinearClickTracking id."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creative-readiness.dev/schemas/diff-result.json",
+  "title": "DiffResult",
+  "description": "W20 last-minute invalidation set. Tracking-only keeps transcode. Media change does not.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["tracking_only", "keep_transcode", "invalidations"],
+  "properties": {
+    "tracking_only": { "type": "boolean" },
+    "keep_transcode": { "type": "boolean" },
+    "invalidations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["requirement_id", "dimension", "message"],
+        "properties": {
+          "requirement_id": { "type": "string", "minLength": 1 },
+          "dimension": {
+            "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/dimensionName"
+          },
+          "message": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}

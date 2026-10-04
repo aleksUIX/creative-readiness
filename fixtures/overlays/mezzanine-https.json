@@ -1,0 +1,10 @@
+{
+  "id": "mezzanine-https",
+  "requirements": [
+    {
+      "id": "mezz.https",
+      "kind": "mezzanine_https",
+      "message": "this overlay requires Mezzanine URLs to be HTTPS when present. Missing Mezzanine passes. Builtin packs already fail HTTP Mezzanine via media_https when a Mezzanine URL is nonempty."
+    }
+  ]
+}

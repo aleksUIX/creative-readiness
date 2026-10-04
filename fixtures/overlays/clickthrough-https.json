@@ -1,0 +1,10 @@
+{
+  "id": "clickthrough-https",
+  "requirements": [
+    {
+      "id": "clickthrough.https",
+      "kind": "clickthrough_https",
+      "message": "this overlay requires every ClickThrough URL to be HTTPS. Missing ClickThrough fails closed. Builtin packs do not require ClickThrough."
+    }
+  ]
+}

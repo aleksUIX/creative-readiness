@@ -1,0 +1,11 @@
+{
+  "id": "creative-adid",
+  "requirements": [
+    {
+      "id": "creative.adid",
+      "kind": "creative_adid",
+      "values": ["ad-1"],
+      "message": "this overlay requires Creative AdID ad-1. Builtin packs do not pin Creative AdID."
+    }
+  ]
+}

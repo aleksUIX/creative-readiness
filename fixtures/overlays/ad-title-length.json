@@ -1,0 +1,11 @@
+{
+  "id": "ad-title-length",
+  "requirements": [
+    {
+      "id": "adtitle.min",
+      "kind": "min_ad_title_length",
+      "min": 3,
+      "message": "this overlay requires AdTitle to be at least three characters. Builtin packs do not bound AdTitle length."
+    }
+  ]
+}

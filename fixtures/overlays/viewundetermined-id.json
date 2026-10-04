@@ -1,0 +1,11 @@
+{
+  "id": "viewundetermined-id",
+  "requirements": [
+    {
+      "id": "vu.id",
+      "kind": "viewundetermined_id",
+      "values": ["vu-1"],
+      "message": "this overlay requires ViewUndetermined id vu-1. Missing ViewUndetermined or id fails closed. Builtin packs do not pin ViewUndetermined id."
+    }
+  ]
+}

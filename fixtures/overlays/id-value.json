@@ -1,0 +1,11 @@
+{
+  "id": "id-value",
+  "requirements": [
+    {
+      "id": "uad.idvalue",
+      "kind": "id_value",
+      "values": ["FROM-ATTR"],
+      "message": "this overlay requires UniversalAdId idValue FROM-ATTR. Missing UniversalAdId or idValue fails closed. Builtin packs do not pin UniversalAdId idValue."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "icon-max-height",
+  "requirements": [
+    {
+      "id": "icon.max-h",
+      "kind": "max_icon_height",
+      "max": 20,
+      "message": "this overlay requires an Icon at most 20 pixels tall. Missing Icon or height fails closed. Joins sibling min Icon size and sibling max_icon_width on one Icon. Distinct from min_icon_height. Builtin packs do not pin an Icon height cap."
+    }
+  ]
+}

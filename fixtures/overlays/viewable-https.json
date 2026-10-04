@@ -1,0 +1,10 @@
+{
+  "id": "viewable-https",
+  "requirements": [
+    {
+      "id": "viewable.https",
+      "kind": "viewable_https",
+      "message": "this overlay requires ViewableImpression with an HTTPS Viewable URL. NotViewable and ViewUndetermined URLs must be HTTPS when present. Builtin packs do not require viewability pings."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "viewable-impression-id",
+  "requirements": [
+    {
+      "id": "view.id",
+      "kind": "viewable_impression_id",
+      "values": ["view-1"],
+      "message": "this overlay requires ViewableImpression id view-1. Missing ViewableImpression fails closed. Builtin packs do not pin a ViewableImpression id."
+    }
+  ]
+}

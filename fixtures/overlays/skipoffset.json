@@ -1,0 +1,11 @@
+{
+  "id": "skipoffset",
+  "requirements": [
+    {
+      "id": "skip.off",
+      "kind": "skipoffset",
+      "values": ["00:00:05"],
+      "message": "this overlay requires Linear or NonLinear skipoffset 00:00:05. Missing skipoffset fails closed. Builtin packs do not pin skipoffset."
+    }
+  ]
+}

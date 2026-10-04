@@ -1,0 +1,11 @@
+{
+  "id": "nonlinear-clickthrough",
+  "requirements": [
+    {
+      "id": "nlc.url",
+      "kind": "nonlinear_clickthrough",
+      "values": ["https://adv.example.com/nl"],
+      "message": "this overlay requires NonLinearClickThrough https://adv.example.com/nl. Missing NonLinearClickThrough fails closed. Builtin packs do not pin NonLinearClickThrough URLs."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "device-ctv",
+  "device_family": "ctv",
+  "requirements": [
+    {
+      "id": "device-ctv.family",
+      "kind": "device_family",
+      "values": ["ctv", "ott"],
+      "message": "this overlay is for CTV/OTT devices. Unknown device fails closed."
+    }
+  ]
+}

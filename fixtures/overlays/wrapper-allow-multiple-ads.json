@@ -1,0 +1,11 @@
+{
+  "id": "wrapper-allow-multiple-ads",
+  "requirements": [
+    {
+      "id": "wrap.multi",
+      "kind": "wrapper_allow_multiple_ads",
+      "values": ["true"],
+      "message": "this overlay requires Wrapper allowMultipleAds true. Missing Wrapper or allowMultipleAds fails closed. Builtin packs do not pin Wrapper allowMultipleAds."
+    }
+  ]
+}

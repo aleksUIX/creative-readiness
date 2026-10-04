@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creative-readiness.dev/schemas/readiness-evidence.json",
+  "title": "ReadinessEvidence",
+  "description": "Evidence, scope, authority, version, expiration. Not a permanent approved bit. Contextual eligibility is a separate object.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "authority",
+    "scope",
+    "version",
+    "issued_at",
+    "expires_at",
+    "identity",
+    "dimensions",
+    "lifecycle",
+    "findings",
+    "entry_path"
+  ],
+  "properties": {
+    "authority": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/authority"
+    },
+    "scope": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/scope"
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Module version that issued this evidence."
+    },
+    "issued_at": { "type": "string", "format": "date-time" },
+    "expires_at": { "type": "string", "format": "date-time" },
+    "identity": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/identity"
+    },
+    "dimensions": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/dimensions"
+    },
+    "lifecycle": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/lifecycle"
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/finding"
+      }
+    },
+    "entry_path": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/entryPath"
+    },
+    "prepared_media": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/preparedMedia"
+    },
+    "operational_claims": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/operationalClaims"
+    },
+    "seller_treatment": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/sellerTreatment"
+    },
+    "unknown_creative_treatment": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/unknownCreativeTreatment"
+    },
+    "pattern": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/observePattern"
+    },
+    "environments": {
+      "type": "array",
+      "description": "W15. Ready-for-A is not ready-for-B.",
+      "items": {
+        "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/environmentResult"
+      }
+    },
+    "facts": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/mediaFacts"
+    },
+    "sgai": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/sgaiSplit"
+    },
+    "transaction": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/transaction"
+    },
+    "auction_context": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/auctionContext"
+    }
+  }
+}

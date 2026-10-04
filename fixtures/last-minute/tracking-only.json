@@ -1,0 +1,10 @@
+{
+  "id": "w20-tracking-only",
+  "old": "ok-https-mp4.xml",
+  "new": "ok-https-mp4-tracking.xml",
+  "expect": {
+    "tracking_only": true,
+    "keep_transcode": true,
+    "invalidation_ids": []
+  }
+}

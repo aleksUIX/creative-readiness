@@ -1,0 +1,56 @@
+[
+  {
+    "id": "deal-premium",
+    "deal_id": "deal-9",
+    "auction_triggered": "forbidden",
+    "requirements": []
+  },
+  {
+    "id": "publisher-strict",
+    "publisher_id": "pub-1",
+    "requirements": [
+      {
+        "id": "publisher-strict.viewable-required",
+        "kind": "require_element",
+        "element": "ViewableImpression",
+        "message": "publisher overlay requires ViewableImpression on this SSAI path."
+      }
+    ]
+  },
+  {
+    "id": "event-sports",
+    "event_id": "game-1",
+    "requirements": [
+      {
+        "id": "event-sports.max-duration",
+        "kind": "max_duration_seconds",
+        "max": 15,
+        "message": "this live sports overlay caps Linear duration at 15 seconds."
+      }
+    ]
+  },
+  {
+    "id": "event-news",
+    "event_id": "news-1",
+    "requirements": [
+      {
+        "id": "event-news.category-forbidden",
+        "kind": "category_forbidden",
+        "values": ["IAB25", "IAB26"],
+        "message": "this live news overlay forbids declared IAB25/IAB26 categories. It does not classify creative content."
+      }
+    ]
+  },
+  {
+    "id": "device-ctv",
+    "device_family": "ctv",
+    "requirements": [
+      {
+        "id": "device-ctv.family",
+        "kind": "device_family",
+        "values": ["ctv", "ott"],
+        "message": "this overlay is for CTV/OTT devices. Unknown device fails closed."
+      }
+    ]
+  }
+]

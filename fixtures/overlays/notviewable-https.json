@@ -1,0 +1,10 @@
+{
+  "id": "notviewable-https",
+  "requirements": [
+    {
+      "id": "nv.https",
+      "kind": "notviewable_https",
+      "message": "this overlay requires every NotViewable URL to be HTTPS when NotViewable is present. Missing NotViewable passes. Builtin packs do not pin NotViewable HTTPS as a separate kind."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "interactive-creative-file-https",
+  "requirements": [
+    {
+      "id": "icf.https",
+      "kind": "interactive_creative_file_https",
+      "message": "this overlay requires InteractiveCreativeFile URLs to be HTTPS when present. Missing InteractiveCreativeFile passes. Builtin packs forbid VPAID rather than requiring InteractiveCreativeFile HTTPS."
+    }
+  ]
+}

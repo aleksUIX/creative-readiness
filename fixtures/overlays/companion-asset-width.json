@@ -1,0 +1,11 @@
+{
+  "id": "companion-asset-width",
+  "requirements": [
+    {
+      "id": "companion.asset-width",
+      "kind": "min_companion_asset_width",
+      "min": 300,
+      "message": "this overlay requires a Companion assetWidth of at least 300 pixels. Missing Companion or assetWidth fails closed. Builtin packs do not require companion asset size."
+    }
+  ]
+}

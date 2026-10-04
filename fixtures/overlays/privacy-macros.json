@@ -1,0 +1,11 @@
+{
+  "id": "privacy",
+  "requirements": [
+      {
+        "id": "privacy.macros-required",
+        "kind": "require_macros",
+        "values": ["CACHEBUSTING", "TIMESTAMP"],
+        "message": "this overlay requires CACHEBUSTING and TIMESTAMP macros on a tracking or impression URL."
+      }
+  ]
+}

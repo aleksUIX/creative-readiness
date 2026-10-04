@@ -1,0 +1,10 @@
+{
+  "id": "icon-clickthrough-https",
+  "requirements": [
+    {
+      "id": "icon.clickthrough",
+      "kind": "icon_clickthrough_https",
+      "message": "this overlay requires IconClickThrough URLs to be HTTPS when present. Missing IconClickThrough passes. Builtin packs do not require IconClickThrough."
+    }
+  ]
+}

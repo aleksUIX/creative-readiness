@@ -1,0 +1,11 @@
+{
+  "id": "icon-click-fallback-height",
+  "requirements": [
+    {
+      "id": "fb.h",
+      "kind": "min_icon_click_fallback_height",
+      "min": 20,
+      "message": "this overlay requires an IconClickFallbackImage at least 20 pixels tall. Missing IconClickFallbackImage or height fails closed. Builtin packs do not require IconClickFallbackImage size."
+    }
+  ]
+}

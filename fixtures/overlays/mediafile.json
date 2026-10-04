@@ -1,0 +1,11 @@
+{
+  "id": "mediafile",
+  "requirements": [
+    {
+      "id": "mf.url",
+      "kind": "mediafile",
+      "values": ["https://cdn.example.com/ad.mp4"],
+      "message": "this overlay requires MediaFile https://cdn.example.com/ad.mp4. Missing MediaFile fails closed. Builtin packs do not pin MediaFile URLs."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creative-readiness.dev/schemas/readiness-summary.json",
+  "title": "ReadinessSummary",
+  "description": "Ad-ops view of one evidence object: gates, remediable finding ids, per-path ready vs not-ready.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "lifecycle",
+    "may_bid",
+    "may_serve",
+    "policy",
+    "technical",
+    "operational",
+    "error_ids",
+    "remediable_ids",
+    "environments_ready",
+    "environments_not_ready"
+  ],
+  "properties": {
+    "lifecycle": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/lifecycle"
+    },
+    "may_bid": { "type": "boolean" },
+    "may_serve": { "type": "boolean" },
+    "policy": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/dimensionState"
+    },
+    "technical": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/dimensionState"
+    },
+    "operational": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/dimensionState"
+    },
+    "error_ids": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "remediable_ids": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "environments_ready": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "environments_not_ready": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    }
+  }
+}

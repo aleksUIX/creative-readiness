@@ -1,0 +1,11 @@
+{
+  "id": "ad-conditional-ad",
+  "requirements": [
+    {
+      "id": "ad.cond",
+      "kind": "ad_conditional_ad",
+      "values": ["true"],
+      "message": "this overlay requires Ad conditionalAd true. Missing Ad or conditionalAd fails closed. Builtin packs do not pin conditionalAd."
+    }
+  ]
+}

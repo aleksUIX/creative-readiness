@@ -1,0 +1,12 @@
+{
+  "id": "event-news",
+  "event_id": "news-1",
+  "requirements": [
+    {
+      "id": "event-news.category-forbidden",
+      "kind": "category_forbidden",
+      "values": ["IAB25", "IAB26"],
+      "message": "this live news overlay forbids declared IAB25/IAB26 categories. It does not classify creative content."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "mezzanine-bitrate-attr",
+  "requirements": [
+    {
+      "id": "mezz.br",
+      "kind": "mezzanine_bitrate",
+      "values": ["8000"],
+      "message": "this overlay requires Mezzanine bitrate 8000. Missing Mezzanine or bitrate fails closed. Distinct from the W10 min_mezzanine_bitrate bound. Builtin packs do not pin Mezzanine bitrate."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "max-width",
+  "requirements": [
+    {
+      "id": "size.max-w",
+      "kind": "max_width",
+      "max": 1920,
+      "message": "this overlay requires a MediaFile at most 1920 pixels wide. Missing MediaFile or width fails closed. Joins sibling max_height on one MediaFile. Builtin packs do not pin a MediaFile width cap."
+    }
+  ]
+}

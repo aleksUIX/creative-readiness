@@ -1,0 +1,11 @@
+{
+  "id": "advertiser",
+  "requirements": [
+    {
+      "id": "advertiser.name",
+      "kind": "advertiser",
+      "values": ["Acme"],
+      "message": "this overlay requires Advertiser text Acme. Builtin packs do not pin an advertiser name."
+    }
+  ]
+}

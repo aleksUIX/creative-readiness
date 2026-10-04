@@ -1,0 +1,11 @@
+{
+  "id": "nonlinear-id",
+  "requirements": [
+    {
+      "id": "nl.id",
+      "kind": "nonlinear_id",
+      "values": ["nl-1"],
+      "message": "this overlay requires NonLinear id nl-1. Missing NonLinear or id fails closed. Builtin packs do not pin NonLinear id."
+    }
+  ]
+}

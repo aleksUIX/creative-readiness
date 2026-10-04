@@ -1,0 +1,11 @@
+{
+  "id": "icon-click-fallback-max-width",
+  "requirements": [
+    {
+      "id": "fb.max-w",
+      "kind": "max_icon_click_fallback_width",
+      "max": 20,
+      "message": "this overlay requires an IconClickFallbackImage at most 20 pixels wide. Missing IconClickFallbackImage or width fails closed. Joins sibling min IconClickFallbackImage size on one IconClickFallbackImage. Distinct from min_icon_click_fallback_width. Builtin packs do not pin an IconClickFallbackImage width cap."
+    }
+  ]
+}

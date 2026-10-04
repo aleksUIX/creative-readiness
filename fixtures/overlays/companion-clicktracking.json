@@ -1,0 +1,11 @@
+{
+  "id": "companion-clicktracking",
+  "requirements": [
+    {
+      "id": "cctk.url",
+      "kind": "companion_clicktracking",
+      "values": ["https://t.example.com/c"],
+      "message": "this overlay requires CompanionClickTracking https://t.example.com/c. Missing CompanionClickTracking fails closed. Builtin packs do not pin CompanionClickTracking URLs."
+    }
+  ]
+}

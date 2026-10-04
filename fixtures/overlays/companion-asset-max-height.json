@@ -1,0 +1,11 @@
+{
+  "id": "companion-asset-max-height",
+  "requirements": [
+    {
+      "id": "comp.max-ah",
+      "kind": "max_companion_asset_height",
+      "max": 300,
+      "message": "Companion assetHeight must be at most 300 pixels. Missing or invalid assetHeight fails closed. Sibling asset size bounds apply to the same Companion."
+    }
+  ]
+}

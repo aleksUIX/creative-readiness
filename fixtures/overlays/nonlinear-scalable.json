@@ -1,0 +1,11 @@
+{
+  "id": "nonlinear-scalable",
+  "requirements": [
+    {
+      "id": "nl.scal",
+      "kind": "nonlinear_scalable",
+      "values": ["true"],
+      "message": "this overlay requires NonLinear scalable true. Missing NonLinear or scalable fails closed. Builtin packs do not pin NonLinear scalable."
+    }
+  ]
+}

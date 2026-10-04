@@ -1,0 +1,10 @@
+{
+  "id": "nonlinear-clickthrough-https",
+  "requirements": [
+    {
+      "id": "nonlinear.clickthrough",
+      "kind": "nonlinear_clickthrough_https",
+      "message": "this overlay requires NonLinearClickThrough URLs to be HTTPS when present. Missing NonLinearClickThrough passes. Builtin packs do not require NonLinearClickThrough."
+    }
+  ]
+}

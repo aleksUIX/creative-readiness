@@ -1,0 +1,18 @@
+[package]
+name = "creative-readiness-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+description = "Evaluate live-event ad creative readiness from VAST and a policy pack"
+repository.workspace = true
+
+[dependencies]
+vastlint-core.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+time.workspace = true
+sha2.workspace = true
+
+[dev-dependencies]
+jsonschema = "0.33"

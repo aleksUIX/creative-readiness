@@ -1,0 +1,10 @@
+{
+  "id": "custom-click-https",
+  "requirements": [
+    {
+      "id": "custom.https",
+      "kind": "custom_click_https",
+      "message": "this overlay requires every CustomClick URL to be HTTPS when CustomClick is present. Missing CustomClick passes. Builtin packs do not pin CustomClick HTTPS as a separate kind."
+    }
+  ]
+}

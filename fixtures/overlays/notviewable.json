@@ -1,0 +1,11 @@
+{
+  "id": "notviewable",
+  "requirements": [
+    {
+      "id": "nv.url",
+      "kind": "notviewable",
+      "values": ["https://t.example.com/nv"],
+      "message": "this overlay requires NotViewable https://t.example.com/nv. Missing NotViewable fails closed. Builtin packs do not pin NotViewable URLs."
+    }
+  ]
+}

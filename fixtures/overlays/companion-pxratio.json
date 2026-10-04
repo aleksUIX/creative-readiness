@@ -1,0 +1,11 @@
+{
+  "id": "companion-pxratio",
+  "requirements": [
+    {
+      "id": "comp.px",
+      "kind": "companion_pxratio",
+      "values": ["2"],
+      "message": "this overlay requires Companion pxratio 2. Missing Companion or pxratio fails closed. Builtin packs do not pin Companion pxratio."
+    }
+  ]
+}

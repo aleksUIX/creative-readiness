@@ -1,0 +1,11 @@
+{
+  "id": "icon-pxratio",
+  "requirements": [
+    {
+      "id": "icon.px",
+      "kind": "icon_pxratio",
+      "values": ["2"],
+      "message": "this overlay requires Icon pxratio 2. Missing Icon or pxratio fails closed. Builtin packs do not pin Icon pxratio."
+    }
+  ]
+}

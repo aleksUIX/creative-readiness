@@ -1,0 +1,1235 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creative-readiness.dev/schemas/defs.json",
+  "$comment": "Shared interchange types. Object schemas copy these $defs so jsonschema::validate works without a $ref retriever.",
+  "title": "Creative Readiness shared definitions",
+  "type": "object",
+  "$defs": {
+    "pack": {
+      "type": "string",
+      "enum": ["none", "live-ssai", "live-sgai", "live-csai", "live-hybrid"]
+    },
+    "architecture": {
+      "type": "string",
+      "enum": ["ssai", "sgai", "csai", "hybrid"]
+    },
+    "dimensionState": {
+      "type": "string",
+      "enum": ["unknown", "ready", "not_ready", "not_evaluated"]
+    },
+    "lifecycle": {
+      "type": "string",
+      "enum": [
+        "unknown",
+        "observed",
+        "pending_review",
+        "approved",
+        "rejected",
+        "technically_ready",
+        "operationally_ready",
+        "expired",
+        "revalidation_required"
+      ]
+    },
+    "entryPath": {
+      "type": "string",
+      "enum": ["proactive", "auction_triggered"]
+    },
+    "sellerTreatment": {
+      "type": "string",
+      "description": "Seller-declared disposition. The module echoes this; it does not choose it.",
+      "enum": ["serve", "fallback", "reject", "defer"]
+    },
+    "unknownCreativeTreatment": {
+      "type": "string",
+      "enum": ["informational", "serve", "fallback", "reject", "defer"],
+      "description": "Pack hint for unknown creatives. Echoed on evidence; the module does not apply it as a gate."
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["error", "warning", "info"]
+    },
+    "dimensionName": {
+      "type": "string",
+      "enum": ["policy", "technical", "operational", "contextual"]
+    },
+    "authorityRole": {
+      "type": "string",
+      "enum": [
+        "ssp",
+        "marketplace",
+        "publisher",
+        "streaming_platform",
+        "ad_server",
+        "ssai",
+        "sgai",
+        "other"
+      ]
+    },
+    "scopeKind": {
+      "type": "string",
+      "enum": ["environment", "publisher", "deal", "event"]
+    },
+    "transaction": {
+      "type": "string",
+      "minLength": 1,
+      "description": "programmatic or direct. Echoed; not a pacing decision."
+    },
+    "hexDigest": {
+      "type": "string",
+      "minLength": 2,
+      "pattern": "^[0-9a-fA-F]+$",
+      "description": "Hex digest. Production hashes are 64-char SHA-256; fixtures may use short placeholders."
+    },
+    "requirementKind": {
+      "type": "string",
+      "enum": [
+        "forbid_vpaid",
+        "require_element",
+        "media_https",
+        "max_duration_seconds",
+        "min_duration_seconds",
+        "max_skipoffset_seconds",
+        "media_type",
+        "min_width",
+        "min_height",
+        "max_width",
+        "max_height",
+        "max_bitrate",
+        "min_bitrate",
+        "aspect_ratio",
+        "require_tracking_events",
+        "require_macros",
+        "category_forbidden",
+        "codec",
+        "audio_codec",
+        "container",
+        "delivery",
+        "device_family",
+        "caption_language",
+        "caption_type",
+        "id_registry",
+        "icon_program",
+        "min_suggested_duration_seconds",
+        "ad_system_version",
+        "icon_x_position",
+        "icon_y_position",
+        "min_icon_duration_seconds",
+        "max_icon_offset_seconds",
+        "min_companion_width",
+        "min_companion_height",
+        "max_companion_width",
+        "max_companion_height",
+        "min_ad_serving_id_length",
+        "vast_version",
+        "creative_sequence",
+        "max_expires_seconds",
+        "min_expires_seconds",
+        "ad_sequence",
+        "wrapper_https",
+        "verification_vendor",
+        "pricing_model",
+        "pricing_currency",
+        "error_https",
+        "viewable_https",
+        "impression_https",
+        "clickthrough_https",
+        "survey_https",
+        "clicktracking_https",
+        "icon_clickthrough_https",
+        "category_authority",
+        "javascript_resource_https",
+        "companion_clickthrough_https",
+        "advertiser",
+        "executable_resource_https",
+        "nonlinear_clickthrough_https",
+        "min_description_length",
+        "static_resource_https",
+        "iframe_resource_https",
+        "min_ad_title_length",
+        "html_resource_https",
+        "flash_resource_https",
+        "min_ad_parameters_length",
+        "closed_caption_https",
+        "icon_viewtracking_https",
+        "ad_system",
+        "icon_clickfallback_https",
+        "mezzanine_https",
+        "category",
+        "tracking_https",
+        "pricing",
+        "extension_https",
+        "interactive_creative_file_https",
+        "universal_ad_id",
+        "api_framework",
+        "creative_adid",
+        "interactive_creative_file_type",
+        "viewable_impression_id",
+        "companion_type",
+        "icon_type",
+        "ad_id",
+        "mediafile_id",
+        "companion_adslot_id",
+        "icon_alt_text",
+        "companion_id",
+        "icon_hover_text",
+        "nonlinear_id",
+        "companion_rendering_mode",
+        "icon_pxratio",
+        "nonlinear_scalable",
+        "min_companion_expanded_width",
+        "min_companion_expanded_height",
+        "max_companion_expanded_width",
+        "max_companion_expanded_height",
+        "nonlinear_maintain_aspect_ratio",
+        "min_companion_asset_width",
+        "min_companion_asset_height",
+        "max_companion_asset_width",
+        "max_companion_asset_height",
+        "min_nonlinear_expanded_width",
+        "min_nonlinear_expanded_height",
+        "max_nonlinear_expanded_width",
+        "max_nonlinear_expanded_height",
+        "companion_xml_encoded",
+        "companion_pxratio",
+        "min_nonlinear_width",
+        "min_nonlinear_height",
+        "max_nonlinear_width",
+        "max_nonlinear_height",
+        "wrapper_follow_additional_wrappers",
+        "wrapper_allow_multiple_ads",
+        "wrapper_fallback_on_no_ad",
+        "ad_conditional_ad",
+        "mediafile_scalable",
+        "mediafile_maintain_aspect_ratio",
+        "executable_resource_type",
+        "javascript_resource_browser_optional",
+        "extension_type",
+        "mezzanine_type",
+        "mezzanine_delivery",
+        "ad_parameters_xml_encoded",
+        "mezzanine_codec",
+        "min_mezzanine_file_size",
+        "min_mezzanine_width",
+        "min_mezzanine_height",
+        "max_mezzanine_width",
+        "max_mezzanine_height",
+        "min_mezzanine_bitrate",
+        "max_mezzanine_bitrate",
+        "mezzanine_media_type",
+        "mezzanine_scalable",
+        "mezzanine_maintain_aspect_ratio",
+        "mezzanine_id",
+        "icon_xml_encoded",
+        "nonlinear_xml_encoded",
+        "min_icon_width",
+        "min_icon_height",
+        "max_icon_width",
+        "max_icon_height",
+        "caption_file_status",
+        "min_icon_click_fallback_width",
+        "min_icon_click_fallback_height",
+        "max_icon_click_fallback_width",
+        "max_icon_click_fallback_height",
+        "advertiser_id",
+        "companion_alt_text",
+        "verification_parameters_https",
+        "ad_type",
+        "impression_id",
+        "companion_ads_required",
+        "min_mediafile_file_size",
+        "mediafile_media_type",
+        "interactive_creative_file_variable_duration",
+        "creative_id",
+        "clickthrough_id",
+        "tracking_offset",
+        "clicktracking_id",
+        "custom_click_id",
+        "icon_clickthrough_id",
+        "companion_clickthrough_id",
+        "nonlinear_clickthrough_id",
+        "icon_clicktracking_id",
+        "companion_clicktracking_id",
+        "nonlinear_clicktracking_id",
+        "icon_viewtracking_id",
+        "tracking_id",
+        "error_id",
+        "viewable_id",
+        "notviewable_id",
+        "viewundetermined_id",
+        "survey_id",
+        "skipoffset",
+        "duration",
+        "expires",
+        "icon_duration",
+        "icon_offset",
+        "min_suggested_duration",
+        "ad_serving_id",
+        "ad_title",
+        "description",
+        "ad_parameters",
+        "static_resource_creative_type",
+        "flash_resource_creative_type",
+        "impression",
+        "error",
+        "clickthrough",
+        "survey",
+        "tracking",
+        "viewable",
+        "clicktracking",
+        "mezzanine",
+        "mediafile",
+        "vast_ad_tag_uri",
+        "javascript_resource",
+        "closed_caption_file",
+        "executable_resource",
+        "icon_clickthrough",
+        "companion_clickthrough",
+        "nonlinear_clickthrough",
+        "icon_viewtracking",
+        "interactive_creative_file",
+        "static_resource",
+        "iframe_resource",
+        "html_resource",
+        "flash_resource",
+        "icon_clickfallback",
+        "custom_click",
+        "icon_clicktracking",
+        "companion_clicktracking",
+        "nonlinear_clicktracking",
+        "notviewable",
+        "viewundetermined",
+        "extension",
+        "verification_parameters",
+        "blocked_ad_categories",
+        "creative_extension",
+        "creative_extension_type",
+        "id_value",
+        "mediafile_codec",
+        "creative_extension_https",
+        "notviewable_https",
+        "viewundetermined_https",
+        "custom_click_https",
+        "icon_clicktracking_https",
+        "companion_clicktracking_https",
+        "nonlinear_clicktracking_https",
+        "blocked_ad_categories_authority",
+        "mediafile_minbitrate",
+        "mediafile_maxbitrate",
+        "mezzanine_minbitrate",
+        "mezzanine_maxbitrate",
+        "mediafile_bitrate",
+        "mezzanine_bitrate",
+        "mediafile_filesize",
+        "mezzanine_filesize",
+        "mediafile_width",
+        "mediafile_height",
+        "mezzanine_width",
+        "mezzanine_height",
+        "mediafile_delivery",
+        "icon_width",
+        "icon_height",
+        "companion_width",
+        "companion_height",
+        "nonlinear_width",
+        "nonlinear_height",
+        "companion_expanded_width",
+        "companion_expanded_height",
+        "nonlinear_expanded_width",
+        "nonlinear_expanded_height",
+        "companion_asset_width",
+        "companion_asset_height",
+        "icon_click_fallback_width",
+        "icon_click_fallback_height",
+        "mediafile_type"
+      ]
+    },
+    "invalidationWhen": {
+      "type": "string",
+      "enum": ["tracking_only", "media_change", "wrapper_change", "emergency_pull"]
+    },
+    "invalidationAction": {
+      "type": "string",
+      "enum": [
+        "keep_transcode",
+        "invalidate_technical_operational",
+        "revaluate_technical",
+        "expire"
+      ]
+    },
+    "packaging": {
+      "type": "string",
+      "enum": ["hls", "dash", "mp4", "cmaf"]
+    },
+    "container": {
+      "type": "string",
+      "enum": ["mp4", "webm", "hls", "dash"]
+    },
+    "auctionTriggered": {
+      "type": "string",
+      "enum": ["allowed", "forbidden"]
+    },
+    "observePattern": {
+      "type": "string",
+      "enum": ["A", "B", "C", "D", "E"]
+    },
+    "finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["requirement_id", "severity", "message"],
+      "properties": {
+        "requirement_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Stable id. Pack ids are pack.rule; operational.* and eligibility.* and gate.* are module ids."
+        },
+        "severity": { "$ref": "#/$defs/severity" },
+        "message": { "type": "string", "minLength": 1 },
+        "remediable": { "type": "boolean" },
+        "path": { "type": "string" },
+        "environment": { "type": "string" },
+        "publisher": { "type": "string" },
+        "deal": { "type": "string" },
+        "dimension": { "$ref": "#/$defs/dimensionName" },
+        "issued_at": { "type": "string", "format": "date-time" }
+      }
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "System ids are aliases. Media identity is fingerprint: hash or sha256(url), plus UniversalAdId when present.",
+      "properties": {
+        "crid": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Creative@id, or OpenRTB bid.crid on observe."
+        },
+        "universal_ad_id": { "type": "string", "minLength": 1 },
+        "media_url": { "type": "string", "minLength": 1 },
+        "content_hash": { "type": "string", "minLength": 1 },
+        "fingerprint": {
+          "type": "string",
+          "pattern": "^(hash|url):.+"
+        },
+        "version": { "type": "string", "minLength": 1 },
+        "dsp_id": { "type": "string", "minLength": 1 },
+        "ssp_id": { "type": "string", "minLength": 1 },
+        "mid": {
+          "type": "string",
+          "minLength": 1,
+          "description": "AdServingId when present."
+        },
+        "mezzanine_url": { "type": "string", "minLength": 1 }
+      }
+    },
+    "dimensions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["policy", "technical", "operational", "contextual"],
+      "properties": {
+        "policy": { "$ref": "#/$defs/dimensionState" },
+        "technical": { "$ref": "#/$defs/dimensionState" },
+        "operational": { "$ref": "#/$defs/dimensionState" },
+        "contextual": { "$ref": "#/$defs/dimensionState" }
+      }
+    },
+    "sgaiSplit": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "W14. Server-ready is not end-to-end-ready.",
+      "required": ["server", "signaling", "client_capability", "execution"],
+      "properties": {
+        "server": { "$ref": "#/$defs/dimensionState" },
+        "signaling": { "$ref": "#/$defs/dimensionState" },
+        "client_capability": { "$ref": "#/$defs/dimensionState" },
+        "execution": { "$ref": "#/$defs/dimensionState" }
+      }
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "role"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "role": { "$ref": "#/$defs/authorityRole" },
+        "acts_on_behalf_of": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "id"],
+      "properties": {
+        "kind": { "$ref": "#/$defs/scopeKind" },
+        "id": { "type": "string", "minLength": 1 }
+      }
+    },
+    "mediaFacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Declared VAST facts. Not a probe, not a classifier.",
+      "properties": {
+        "duration_seconds": { "type": "integer", "minimum": 0 },
+        "width": { "type": "integer", "minimum": 0 },
+        "height": { "type": "integer", "minimum": 0 },
+        "mime": { "type": "string", "minLength": 1 },
+        "bitrate": { "type": "integer", "minimum": 0 },
+        "codec": { "type": "string", "minLength": 1 },
+        "codecs": { "type": "string", "minLength": 1 },
+        "audio_codec": { "type": "string", "minLength": 1 },
+        "container": { "$ref": "#/$defs/container" },
+        "tracking_events": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
+        "categories": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "mezzanine_url": { "type": "string", "minLength": 1 },
+        "privacy_macros": { "type": "boolean" }
+      }
+    },
+    "preparedRendition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "sha256"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "sha256": { "$ref": "#/$defs/hexDigest" }
+      }
+    },
+    "preparedMedia": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ladder_id", "source_hash", "renditions"],
+      "properties": {
+        "ladder_id": { "type": "string", "minLength": 1 },
+        "source_hash": { "$ref": "#/$defs/hexDigest" },
+        "renditions": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/preparedRendition" }
+        },
+        "packaging": { "$ref": "#/$defs/packaging" },
+        "trackers_preserved": { "type": "boolean" },
+        "mapped_ad_id": { "type": "string", "minLength": 1 }
+      }
+    },
+    "operationalClaims": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "W13 assertions checked against the pack ladder. Not a CDN push.",
+      "properties": {
+        "transcoded": { "type": "boolean" },
+        "packaged": { "type": "boolean" },
+        "cached": { "type": "boolean" },
+        "rendition_count": { "type": "integer", "minimum": 0 },
+        "client_ready": { "type": "boolean" },
+        "received": { "type": "boolean" },
+        "accessible": { "type": "boolean" },
+        "trackers_preserved": { "type": "boolean" },
+        "mapped_ad_id": { "type": "string", "minLength": 1 }
+      }
+    },
+    "auctionContext": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "OpenRTB-lite fields copied onto evidence. Not a pacing engine.",
+      "properties": {
+        "bidid": { "type": "string", "minLength": 1 },
+        "crid": { "type": "string", "minLength": 1 },
+        "dealid": { "type": "string", "minLength": 1 },
+        "publisher_id": { "type": "string", "minLength": 1 },
+        "maxduration": { "type": "integer", "minimum": 0 },
+        "fallback_crid": { "type": "string", "minLength": 1 }
+      }
+    },
+    "opportunity": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Contextual eligibility input. Ready is not eligible-for-this-break.",
+      "properties": {
+        "break_duration_seconds": { "type": "integer", "minimum": 1 },
+        "event_id": { "type": "string", "minLength": 1 },
+        "publisher_id": { "type": "string", "minLength": 1 },
+        "deal_id": { "type": "string", "minLength": 1 },
+        "transaction": { "$ref": "#/$defs/transaction" },
+        "program": { "type": "string", "minLength": 1 },
+        "competitive_conflict": {
+          "type": "boolean",
+          "description": "Seller-declared. We echo it; we do not score content."
+        },
+        "vast_xml": { "type": "string", "minLength": 1 },
+        "device_family": { "type": "string", "minLength": 1 },
+        "supply_path": { "type": "string", "minLength": 1 }
+      }
+    },
+    "requirement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "message"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "kind": { "$ref": "#/$defs/requirementKind" },
+        "message": { "type": "string", "minLength": 1 },
+        "element": { "type": "string", "minLength": 1 },
+        "max": { "type": "integer", "minimum": 0 },
+        "min": { "type": "integer", "minimum": 0 },
+        "value": { "type": "string", "minLength": 1 },
+        "values": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "kind": { "const": "require_element" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["element"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "max_duration_seconds" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["max"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_duration_seconds" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "max_skipoffset_seconds" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["max"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_suggested_duration_seconds" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_icon_duration_seconds" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "max_icon_offset_seconds" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["max"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_companion_width" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_companion_height" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_companion_expanded_width" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_companion_expanded_height" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_companion_asset_width" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_companion_asset_height" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_nonlinear_expanded_width" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_nonlinear_expanded_height" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_nonlinear_width" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_nonlinear_height" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_mezzanine_file_size" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_mezzanine_width" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_mezzanine_height" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "max_mezzanine_width" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["max"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "max_mezzanine_height" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["max"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_mezzanine_bitrate" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "max_mezzanine_bitrate" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["max"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_icon_width" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_icon_height" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_icon_click_fallback_width" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_icon_click_fallback_height" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "max_companion_width" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["max"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "max_companion_height" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["max"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "max_icon_width" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["max"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "max_icon_height" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["max"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "max_nonlinear_width" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["max"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "max_nonlinear_height" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["max"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "max_icon_click_fallback_width" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["max"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "max_icon_click_fallback_height" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["max"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "max_companion_expanded_width" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["max"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "max_companion_expanded_height" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["max"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "max_companion_asset_width" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["max"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "max_companion_asset_height" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["max"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "max_nonlinear_expanded_width" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["max"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "max_nonlinear_expanded_height" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["max"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_ad_serving_id_length" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_description_length" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_ad_title_length" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_ad_parameters_length" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "max_expires_seconds" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["max"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_expires_seconds" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_width" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_height" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "max_width" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["max"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "max_height" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["max"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "max_bitrate" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["max"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "min_bitrate" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["min"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "aspect_ratio" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["value"] }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "enum": [
+                  "media_type",
+                  "require_tracking_events",
+                  "require_macros",
+                  "category_forbidden",
+                  "codec",
+                  "audio_codec",
+                  "container",
+                  "delivery",
+                  "device_family",
+                  "caption_language",
+                  "caption_type",
+                  "id_registry",
+                  "icon_program",
+                  "ad_system_version",
+                  "icon_x_position",
+                  "icon_y_position",
+                  "vast_version",
+                  "creative_sequence",
+                  "ad_sequence",
+                  "verification_vendor",
+                  "pricing_model",
+                  "pricing_currency",
+                  "category_authority",
+                  "advertiser",
+                  "ad_system",
+                  "category",
+                  "pricing",
+                  "universal_ad_id",
+                  "api_framework",
+                  "creative_adid",
+                  "interactive_creative_file_type",
+                  "viewable_impression_id",
+                  "companion_type",
+                  "icon_type",
+                  "ad_id",
+                  "mediafile_id",
+                  "companion_adslot_id",
+                  "icon_alt_text",
+                  "companion_id",
+                  "icon_hover_text",
+                  "nonlinear_id",
+                  "companion_rendering_mode",
+                  "icon_pxratio",
+                  "nonlinear_scalable",
+                  "nonlinear_maintain_aspect_ratio",
+                  "companion_xml_encoded",
+                  "companion_pxratio",
+                  "wrapper_follow_additional_wrappers",
+                  "wrapper_allow_multiple_ads",
+                  "wrapper_fallback_on_no_ad",
+                  "ad_conditional_ad",
+                  "mediafile_scalable",
+                  "mediafile_maintain_aspect_ratio",
+                  "executable_resource_type",
+                  "javascript_resource_browser_optional",
+                  "extension_type",
+                  "mezzanine_type",
+                  "mezzanine_delivery",
+                  "ad_parameters_xml_encoded",
+                  "mezzanine_codec",
+                  "mezzanine_media_type",
+                  "mezzanine_scalable",
+                  "mezzanine_maintain_aspect_ratio",
+                  "mezzanine_id",
+                  "icon_xml_encoded",
+                  "nonlinear_xml_encoded",
+                  "caption_file_status",
+                  "advertiser_id",
+                  "companion_alt_text",
+                  "ad_type",
+                  "impression_id",
+                  "companion_ads_required",
+                  "mediafile_media_type",
+                  "interactive_creative_file_variable_duration",
+                  "creative_id",
+                  "clickthrough_id",
+                  "tracking_offset",
+                  "clicktracking_id",
+                  "custom_click_id",
+                  "icon_clickthrough_id",
+                  "companion_clickthrough_id",
+                  "nonlinear_clickthrough_id",
+                  "icon_clicktracking_id",
+                  "companion_clicktracking_id",
+                  "nonlinear_clicktracking_id",
+                  "icon_viewtracking_id",
+                  "tracking_id",
+                  "error_id",
+                  "viewable_id",
+                  "notviewable_id",
+                  "viewundetermined_id",
+                  "survey_id",
+                  "skipoffset",
+                  "duration",
+                  "expires",
+                  "icon_duration",
+                  "icon_offset",
+                  "min_suggested_duration",
+                  "ad_serving_id",
+                  "ad_title",
+                  "description",
+                  "ad_parameters",
+                  "static_resource_creative_type",
+                  "flash_resource_creative_type",
+                  "impression",
+                  "error",
+                  "clickthrough",
+                  "survey",
+                  "tracking",
+                  "viewable",
+                  "clicktracking",
+                  "mezzanine",
+                  "mediafile",
+                  "vast_ad_tag_uri",
+                  "javascript_resource",
+                  "closed_caption_file",
+                  "executable_resource",
+                  "icon_clickthrough",
+                  "companion_clickthrough",
+                  "nonlinear_clickthrough",
+                  "icon_viewtracking",
+                  "interactive_creative_file",
+                  "static_resource",
+                  "iframe_resource",
+                  "html_resource",
+                  "flash_resource",
+                  "icon_clickfallback",
+                  "custom_click",
+                  "icon_clicktracking",
+                  "companion_clicktracking",
+                  "nonlinear_clicktracking",
+                  "notviewable",
+                  "viewundetermined",
+                  "extension",
+                  "verification_parameters",
+                  "blocked_ad_categories",
+                  "creative_extension",
+                  "creative_extension_type",
+                  "id_value",
+                  "mediafile_codec",
+                  "blocked_ad_categories_authority",
+                  "mediafile_minbitrate",
+                  "mediafile_maxbitrate",
+                  "mezzanine_minbitrate",
+                  "mezzanine_maxbitrate",
+                  "mediafile_bitrate",
+                  "mezzanine_bitrate",
+                  "mediafile_filesize",
+                  "mezzanine_filesize",
+                  "mediafile_width",
+                  "mediafile_height",
+                  "mezzanine_width",
+                  "mezzanine_height",
+                  "mediafile_delivery",
+                  "icon_width",
+                  "icon_height",
+                  "companion_width",
+                  "companion_height",
+                  "nonlinear_width",
+                  "nonlinear_height",
+                  "companion_expanded_width",
+                  "companion_expanded_height",
+                  "nonlinear_expanded_width",
+                  "nonlinear_expanded_height",
+                  "companion_asset_width",
+                  "companion_asset_height",
+                  "icon_click_fallback_width",
+                  "icon_click_fallback_height",
+                  "mediafile_type"
+                ]
+              }
+            },
+            "required": ["kind"]
+          },
+          "then": {
+            "anyOf": [{ "required": ["value"] }, { "required": ["values"] }]
+          }
+        }
+      ]
+    },
+    "ladderRendition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "width", "height", "vcodec"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 },
+        "vcodec": { "type": "string", "minLength": 1 }
+      }
+    },
+    "transcodeLadder": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "renditions"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "packaging": { "$ref": "#/$defs/packaging" },
+        "renditions": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/ladderRendition" }
+        }
+      }
+    },
+    "transformationRights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["inherit_on_encode", "mint_on_media_replacement"],
+      "properties": {
+        "inherit_on_encode": { "type": "boolean" },
+        "mint_on_media_replacement": { "type": "boolean" }
+      }
+    },
+    "invalidationRule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "when", "action"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "when": { "$ref": "#/$defs/invalidationWhen" },
+        "action": { "$ref": "#/$defs/invalidationAction" }
+      }
+    },
+    "policyOverlay": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "deal_id": { "type": "string", "minLength": 1 },
+        "publisher_id": { "type": "string", "minLength": 1 },
+        "event_id": { "type": "string", "minLength": 1 },
+        "device_family": { "type": "string", "minLength": 1 },
+        "auction_triggered": { "$ref": "#/$defs/auctionTriggered" },
+        "requirements": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/requirement" }
+        }
+      }
+    },
+    "environmentResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "architecture", "dimensions"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "architecture": { "type": "string", "minLength": 1 },
+        "dimensions": { "$ref": "#/$defs/dimensions" },
+        "note": { "type": "string", "minLength": 1 },
+        "sgai": { "$ref": "#/$defs/sgaiSplit" }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "nonlinear-expanded-height",
+  "requirements": [
+    {
+      "id": "nl.expanded-height",
+      "kind": "min_nonlinear_expanded_height",
+      "min": 500,
+      "message": "this overlay requires a NonLinear expandedHeight of at least 500 pixels. Missing NonLinear or expandedHeight fails closed. Builtin packs do not require expanded NonLinear size."
+    }
+  ]
+}

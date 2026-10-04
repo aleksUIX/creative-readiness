@@ -1,0 +1,23 @@
+{
+  "id": "live-audio",
+  "requirements": [
+    {
+      "id": "live-audio.aac-required",
+      "kind": "audio_codec",
+      "values": ["mp4a", "aac"],
+      "message": "this overlay requires a declared AAC audio codec on MediaFile.codecs. It does not loudness-normalize."
+    },
+    {
+      "id": "live-audio.avc-required",
+      "kind": "codec",
+      "values": ["avc1", "avc"],
+      "message": "this overlay requires a declared AVC video codec on MediaFile.codecs."
+    },
+    {
+      "id": "live-audio.mp4-container",
+      "kind": "container",
+      "value": "mp4",
+      "message": "this overlay requires an mp4 container (MIME subtype or URL)."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "creative-sequence",
+  "requirements": [
+    {
+      "id": "creative.sequence",
+      "kind": "creative_sequence",
+      "values": ["1"],
+      "message": "this overlay requires Creative sequence 1. Builtin packs do not require sequence numbers."
+    }
+  ]
+}

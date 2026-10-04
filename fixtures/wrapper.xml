@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VAST version="4.2">
+  <Ad id="1">
+    <Wrapper>
+      <AdSystem>Test</AdSystem>
+      <VASTAdTagURI><![CDATA[https://ad.example.com/vast.xml]]></VASTAdTagURI>
+      <Impression><![CDATA[https://t.example.com/imp]]></Impression>
+      <Creatives>
+        <Creative>
+          <Linear>
+            <TrackingEvents>
+              <Tracking event="start"><![CDATA[https://t.example.com/start]]></Tracking>
+            </TrackingEvents>
+          </Linear>
+        </Creative>
+      </Creatives>
+    </Wrapper>
+  </Ad>
+</VAST>

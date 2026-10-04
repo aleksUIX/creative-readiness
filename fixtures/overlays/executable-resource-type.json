@@ -1,0 +1,11 @@
+{
+  "id": "executable-resource-type",
+  "requirements": [
+    {
+      "id": "exec.type",
+      "kind": "executable_resource_type",
+      "values": ["application/javascript"],
+      "message": "this overlay requires ExecutableResource type application/javascript. Missing ExecutableResource or type fails closed. Builtin packs do not pin ExecutableResource type."
+    }
+  ]
+}

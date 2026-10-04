@@ -1,0 +1,11 @@
+{
+  "id": "advertiser-id",
+  "requirements": [
+    {
+      "id": "adv.id",
+      "kind": "advertiser_id",
+      "values": ["adv-1"],
+      "message": "this overlay requires Advertiser id adv-1. Missing Advertiser or id fails closed. Builtin packs do not pin Advertiser id."
+    }
+  ]
+}

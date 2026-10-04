@@ -1,0 +1,11 @@
+{
+  "id": "companion-expanded-max-height",
+  "requirements": [
+    {
+      "id": "comp.max-eh",
+      "kind": "max_companion_expanded_height",
+      "max": 400,
+      "message": "this overlay requires a Companion expandedHeight of at most 400 pixels. Missing Companion or expandedHeight fails closed. Joins sibling min Companion expanded size and sibling max_companion_expanded_width on one Companion. Distinct from min_companion_expanded_height. Builtin packs do not pin a Companion expandedHeight cap."
+    }
+  ]
+}

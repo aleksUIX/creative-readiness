@@ -1,0 +1,11 @@
+{
+  "id": "javascript-resource-browser-optional",
+  "requirements": [
+    {
+      "id": "js.opt",
+      "kind": "javascript_resource_browser_optional",
+      "values": ["true"],
+      "message": "this overlay requires JavaScriptResource browserOptional true. Missing JavaScriptResource or browserOptional fails closed. Builtin packs do not pin browserOptional."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "html-resource",
+  "requirements": [
+    {
+      "id": "html.url",
+      "kind": "html_resource",
+      "values": ["https://cdn.example.com/ad.html"],
+      "message": "this overlay requires HTMLResource https://cdn.example.com/ad.html. Missing HTMLResource fails closed. Builtin packs do not pin HTMLResource URLs."
+    }
+  ]
+}

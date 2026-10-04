@@ -1,0 +1,11 @@
+{
+  "id": "interactive-creative-file-type",
+  "requirements": [
+    {
+      "id": "icf.type",
+      "kind": "interactive_creative_file_type",
+      "values": ["application/javascript"],
+      "message": "this overlay requires InteractiveCreativeFile type application/javascript. Missing InteractiveCreativeFile fails closed. Builtin packs do not pin InteractiveCreativeFile type."
+    }
+  ]
+}

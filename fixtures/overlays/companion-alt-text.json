@@ -1,0 +1,11 @@
+{
+  "id": "companion-alt-text",
+  "requirements": [
+    {
+      "id": "comp.alt",
+      "kind": "companion_alt_text",
+      "values": ["Learn more"],
+      "message": "this overlay requires Companion AltText Learn more. Missing AltText fails closed. Builtin packs do not pin Companion AltText."
+    }
+  ]
+}

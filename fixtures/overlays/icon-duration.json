@@ -1,0 +1,11 @@
+{
+  "id": "icon-duration",
+  "requirements": [
+    {
+      "id": "icon.dur",
+      "kind": "icon_duration",
+      "values": ["00:00:15"],
+      "message": "this overlay requires Icon duration 00:00:15. Missing Icon or duration fails closed. Builtin packs do not pin Icon duration."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "captions-lang",
+  "requirements": [
+    {
+      "id": "captions.language",
+      "kind": "caption_language",
+      "values": ["en"],
+      "message": "this overlay requires a ClosedCaptionFile whose language is English. Builtin packs do not require captions."
+    }
+  ]
+}

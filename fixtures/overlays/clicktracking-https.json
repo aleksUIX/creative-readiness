@@ -1,0 +1,10 @@
+{
+  "id": "clicktracking-https",
+  "requirements": [
+    {
+      "id": "clicktracking.https",
+      "kind": "clicktracking_https",
+      "message": "this overlay requires ClickTracking, IconClickTracking, CompanionClickTracking, NonLinearClickTracking, and CustomClick URLs to be HTTPS when present. Builtin packs do not add this kind."
+    }
+  ]
+}

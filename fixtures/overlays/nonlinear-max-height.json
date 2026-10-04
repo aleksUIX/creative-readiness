@@ -1,0 +1,11 @@
+{
+  "id": "nonlinear-max-height",
+  "requirements": [
+    {
+      "id": "nl.max-h",
+      "kind": "max_nonlinear_height",
+      "max": 250,
+      "message": "this overlay requires a NonLinear at most 250 pixels tall. Missing NonLinear or height fails closed. Joins sibling min NonLinear size and sibling max_nonlinear_width on one NonLinear. Distinct from min_nonlinear_height. Builtin packs do not pin a NonLinear height cap."
+    }
+  ]
+}

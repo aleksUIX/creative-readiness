@@ -1,0 +1,11 @@
+{
+  "id": "icon-height",
+  "requirements": [
+    {
+      "id": "icon.h",
+      "kind": "min_icon_height",
+      "min": 20,
+      "message": "this overlay requires an Icon at least 20 pixels tall. Missing Icon or height fails closed. Builtin packs do not require Icon size."
+    }
+  ]
+}

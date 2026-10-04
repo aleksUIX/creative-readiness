@@ -1,0 +1,11 @@
+{
+  "id": "interactive-creative-file",
+  "requirements": [
+    {
+      "id": "icf.url",
+      "kind": "interactive_creative_file",
+      "values": ["https://cdn.example.com/v.js"],
+      "message": "this overlay requires InteractiveCreativeFile https://cdn.example.com/v.js. Missing InteractiveCreativeFile fails closed. Builtin packs do not pin InteractiveCreativeFile URLs."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "mezzanine",
+  "requirements": [
+    {
+      "id": "mezz.url",
+      "kind": "mezzanine",
+      "values": ["https://cdn.example.com/mezz.mp4"],
+      "message": "this overlay requires Mezzanine https://cdn.example.com/mezz.mp4. Missing Mezzanine fails closed. Builtin packs do not pin Mezzanine URLs."
+    }
+  ]
+}

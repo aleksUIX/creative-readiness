@@ -1,0 +1,11 @@
+{
+  "id": "interactive-creative-file-variable-duration",
+  "requirements": [
+    {
+      "id": "icf.var",
+      "kind": "interactive_creative_file_variable_duration",
+      "values": ["true"],
+      "message": "this overlay requires InteractiveCreativeFile variableDuration true. Missing InteractiveCreativeFile or variableDuration fails closed. Builtin packs do not pin InteractiveCreativeFile variableDuration."
+    }
+  ]
+}

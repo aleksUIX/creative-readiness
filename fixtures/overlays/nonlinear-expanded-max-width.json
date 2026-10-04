@@ -1,0 +1,11 @@
+{
+  "id": "nonlinear-expanded-max-width",
+  "requirements": [
+    {
+      "id": "nl.max-ew",
+      "kind": "max_nonlinear_expanded_width",
+      "max": 800,
+      "message": "NonLinear expandedWidth must be at most 800 pixels. Missing or invalid expandedWidth fails closed. Sibling expanded size bounds apply to the same NonLinear."
+    }
+  ]
+}

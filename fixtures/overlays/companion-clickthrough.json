@@ -1,0 +1,11 @@
+{
+  "id": "companion-clickthrough",
+  "requirements": [
+    {
+      "id": "cct.url",
+      "kind": "companion_clickthrough",
+      "values": ["https://adv.example.com/c"],
+      "message": "this overlay requires CompanionClickThrough https://adv.example.com/c. Missing CompanionClickThrough fails closed. Builtin packs do not pin CompanionClickThrough URLs."
+    }
+  ]
+}

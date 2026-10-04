@@ -1,0 +1,11 @@
+{
+  "id": "mezzanine-height",
+  "requirements": [
+    {
+      "id": "mezz.height",
+      "kind": "min_mezzanine_height",
+      "min": 1080,
+      "message": "this overlay requires a Mezzanine at least 1080 pixels tall. Missing Mezzanine or height fails closed. Builtin packs do not require Mezzanine size."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creative-readiness.dev/schemas/bid-gate.json",
+  "title": "BidGate",
+  "description": "DSP/SSP cut. Unknown or pending may bid. Serve needs technically_ready, operationally_ready, or approved, plus eligible. Does not choose seller treatment.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["may_bid", "may_serve", "reasons"],
+  "properties": {
+    "may_bid": { "type": "boolean" },
+    "may_serve": { "type": "boolean" },
+    "reasons": {
+      "type": "array",
+      "description": "Empty when may_serve is true. Otherwise the serve blockers, including bid blockers.",
+      "items": {
+        "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/finding"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "verification-parameters-https",
+  "requirements": [
+    {
+      "id": "vp.https",
+      "kind": "verification_parameters_https",
+      "message": "this overlay requires VerificationParameters to be an HTTPS URL or JSON that contains https:// and no http:// URL when present. Missing VerificationParameters passes. Empty text fails closed. Builtin packs do not add this kind."
+    }
+  ]
+}

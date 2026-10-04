@@ -1,0 +1,11 @@
+{
+  "id": "mediafile-type",
+  "requirements": [
+    {
+      "id": "mf.type",
+      "kind": "mediafile_type",
+      "values": ["video/mp4"],
+      "message": "this overlay requires MediaFile type video/mp4. Missing MediaFile or type fails closed. Distinct from the W10 media_type sibling-join and from mediafile_media_type. Builtin packs do not pin MediaFile type as an allow-list."
+    }
+  ]
+}

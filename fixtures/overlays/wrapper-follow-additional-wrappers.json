@@ -1,0 +1,11 @@
+{
+  "id": "wrapper-follow-additional-wrappers",
+  "requirements": [
+    {
+      "id": "wrap.follow",
+      "kind": "wrapper_follow_additional_wrappers",
+      "values": ["true"],
+      "message": "this overlay requires Wrapper followAdditionalWrappers true. Missing Wrapper or followAdditionalWrappers fails closed. Builtin packs do not pin Wrapper follow flags."
+    }
+  ]
+}

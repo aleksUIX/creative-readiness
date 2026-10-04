@@ -1,0 +1,11 @@
+{
+  "id": "mezzanine-width-attr",
+  "requirements": [
+    {
+      "id": "mezz.w",
+      "kind": "mezzanine_width",
+      "values": ["1920"],
+      "message": "this overlay requires Mezzanine width 1920. Missing Mezzanine or width fails closed. Distinct from the W10 min_mezzanine_width bound. Builtin packs do not pin Mezzanine width."
+    }
+  ]
+}

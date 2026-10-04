@@ -1,0 +1,11 @@
+{
+  "id": "icon-program",
+  "requirements": [
+    {
+      "id": "icons.program",
+      "kind": "icon_program",
+      "values": ["adChoices"],
+      "message": "this overlay requires an Icon whose program is adChoices. Builtin packs do not require icons."
+    }
+  ]
+}

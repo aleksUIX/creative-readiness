@@ -139,10 +139,15 @@ discover_policy(context) -> PolicyDocument
 evaluate(creative, policy, context, operational?) -> ReadinessEvidence
 prepare(mezzanine, ladder) -> PreparedMedia + ReadinessEvidence   // reference probe
 lookup(identity) -> known | unknown + prior evidence
+lookup_fallback(store, auction_context) -> known | unknown   // seller fallback_crid; do not choose treatment
+select_overlays(catalog, opportunity) -> PolicyOverlay[]   // deal → publisher → event → device
+review_queue(store) -> Evidence[]   // observed | pending_review
 diff(old_identity, new_creative) -> invalidation set
 adapt_ama(Ad | Audit) -> Evidence | CapabilitySurface fields
 observe(Observation) -> Evidence (lifecycle starts)
 eligibility(evidence, opportunity) -> Eligibility
+prebid_gate(evidence, opportunity?) -> BidGate   // unknown may bid; serve needs ready + eligible
+summarize(evidence, opportunity?) -> ReadinessSummary
 ```
 
 Deterministic given inputs. No network except optional fetch of a mezzanine for `prepare` / hash, behind an explicit flag.
@@ -178,14 +183,14 @@ Every worksheet has a module object. Final Decision TBD means we ship a default,
 
 | Draft in-scope line | Where it lives |
 | --- | --- |
-| Live CTV and streaming | packs `live-ssai`, `live-sgai` |
-| Programmatic and direct-sold | `context.transaction` on evaluate |
+| Live CTV and streaming | packs `live-ssai`, `live-sgai`, `live-csai`, `live-hybrid` |
+| Programmatic and direct-sold | `transaction` on evaluate; OpenRTB-lite on observe |
 | Proactive registration | `evaluate()` entry_path=proactive |
 | Auction-triggered discovery | `observe()` |
 | Ingest/review interfaces | CapabilitySurface |
 | AMA evolution | `adapt_ama`, experimental 1.2 |
 | Proprietary interoperability | same surface, non-AMA adapters later |
-| SSAI / SGAI / hybrid | environment types + W13/W14 fields |
+| SSAI / SGAI / hybrid | packs + W13/W14 fields; `live-hybrid` is SSAI hop plus SGAI identifiers |
 | Creative validation | `evaluate` technical + vastlint |
 | Creative approval | `dimensions.policy` + lifecycle, not a classifier |
 | Operational preparation | claims + `prepare()` |
@@ -215,13 +220,15 @@ SGAI: probe optional. Server-ready is a different dimension.
 | `creative-readiness-core` | objects, evaluate, lookup, diff, eligibility |
 | `creative-readiness-probe` | ffmpeg prepare(), optional feature |
 | `creative-readiness-ama` | AMA 1.1 JSON + experimental 1.2 |
-| `creative-readiness-cli` | evaluate / prepare / lookup |
-| `creative-readiness-mcp` | agent tools |
-| `creative-readiness-wasm` | evaluate without probe (browser / intake) |
-| `schemas/` | JSON Schema for every object, versioned |
-| `packs/` | `live-ssai`, `live-sgai`, later event overlays |
+| `creative-readiness-cli` | evaluate / prepare / lookup / apply-diff / revalidate / eligibility / transform / observe / ama / surface / gate / summary / select-overlays / queue / authorities |
+| `creative-readiness-mcp` | agent tools including observe_creative, select_overlays, review_queue, lookup_fallback, evaluate_authorities |
+| `creative-readiness-wasm` | evaluate, lookup, eligibility, gate, summary, observe, select_overlays, queue, evaluate_authorities; no probe |
+| `schemas/` | JSON Schema 2020-12. `defs.json` is the shared catalog; object files `$ref` it. `evaluate-request.json` is the Go/Java/MCP evaluate contract. |
+| `packs/` | `live-ssai`, `live-sgai`, `live-csai`, `live-hybrid` plus event overlays |
+| `docs/pack-authoring.md` | member PolicyDocument authoring (not the IAB standard) |
+| `docs/capability-surface.md` | Option C ingest/review surface; AMA is one adapter |
 | `fixtures/` | golden evidence for each worksheet default |
 
-vastlint is a dependency for the VAST technical dimension. pixellint is not in this repo (measurement out of scope). rtblint is not required for 0.x; Observation may later accept an OpenRTB bid fragment.
+vastlint is a dependency for the VAST technical dimension. pixellint is not in this repo (measurement out of scope). Observation accepts an OpenRTB 2.x bid-response fragment (`imp.video.maxduration`, `crid`, `dealid`, publisher id, `ext.fallback_crid`) without taking rtblint as a dep. That parse is not a pacing engine.
 
 License: Apache 2.0. IAB CLA if they take the repo. vastlint stays a separate project. Confirm license and maintainer with Tech Lab before moving the canonical repo under `IABTechLab/`.

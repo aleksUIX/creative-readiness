@@ -1,0 +1,11 @@
+{
+  "id": "flash-resource",
+  "requirements": [
+    {
+      "id": "flash.url",
+      "kind": "flash_resource",
+      "values": ["https://cdn.example.com/ad.swf"],
+      "message": "this overlay requires FlashResource https://cdn.example.com/ad.swf. Missing FlashResource fails closed. Builtin packs do not pin FlashResource URLs."
+    }
+  ]
+}

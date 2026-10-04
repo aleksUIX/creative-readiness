@@ -1,0 +1,11 @@
+{
+  "id": "extension-type",
+  "requirements": [
+    {
+      "id": "ext.type",
+      "kind": "extension_type",
+      "values": ["iab"],
+      "message": "this overlay requires Extension type iab. Missing Extension or type fails closed. Builtin packs do not pin Extension type."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "iframe-resource",
+  "requirements": [
+    {
+      "id": "iframe.url",
+      "kind": "iframe_resource",
+      "values": ["https://cdn.example.com/frame.html"],
+      "message": "this overlay requires IFrameResource https://cdn.example.com/frame.html. Missing IFrameResource fails closed. Builtin packs do not pin IFrameResource URLs."
+    }
+  ]
+}

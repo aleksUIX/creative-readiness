@@ -1,0 +1,11 @@
+{
+  "id": "mezzanine-media-type",
+  "requirements": [
+    {
+      "id": "mezz.mt",
+      "kind": "mezzanine_media_type",
+      "values": ["video"],
+      "message": "this overlay requires Mezzanine mediaType video. Missing Mezzanine or mediaType fails closed. Builtin packs do not pin Mezzanine mediaType."
+    }
+  ]
+}

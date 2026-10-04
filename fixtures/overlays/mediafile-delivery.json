@@ -1,0 +1,11 @@
+{
+  "id": "mediafile-delivery",
+  "requirements": [
+    {
+      "id": "mf.del",
+      "kind": "mediafile_delivery",
+      "values": ["progressive"],
+      "message": "this overlay requires MediaFile delivery progressive. Missing MediaFile or delivery fails closed. Distinct from the W10 delivery sibling-join. Builtin packs do not pin MediaFile delivery as an allow-list."
+    }
+  ]
+}

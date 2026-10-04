@@ -1,0 +1,11 @@
+{
+  "id": "nonlinear-expanded-width-attr",
+  "requirements": [
+    {
+      "id": "nl.ew",
+      "kind": "nonlinear_expanded_width",
+      "values": ["600"],
+      "message": "this overlay requires NonLinear expandedWidth 600. Missing NonLinear or expandedWidth fails closed. Distinct from the W10 min_nonlinear_expanded_width bound. Builtin packs do not pin NonLinear expandedWidth."
+    }
+  ]
+}

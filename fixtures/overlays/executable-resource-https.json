@@ -1,0 +1,10 @@
+{
+  "id": "executable-resource-https",
+  "requirements": [
+    {
+      "id": "executable.https",
+      "kind": "executable_resource_https",
+      "message": "this overlay requires ExecutableResource URLs to be HTTPS when present. Builtin packs do not add this kind."
+    }
+  ]
+}

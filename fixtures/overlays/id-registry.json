@@ -1,0 +1,11 @@
+{
+  "id": "id-registry",
+  "requirements": [
+    {
+      "id": "identity.registry",
+      "kind": "id_registry",
+      "values": ["ad-id.org"],
+      "message": "this overlay requires UniversalAdId idRegistry ad-id.org so reuse can name the registry. Builtin packs only require the element."
+    }
+  ]
+}

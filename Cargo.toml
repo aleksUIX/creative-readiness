@@ -1,0 +1,29 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/creative-readiness-core",
+    "crates/creative-readiness-cli",
+    "crates/creative-readiness-probe",
+    "crates/creative-readiness-ama",
+    "crates/creative-readiness-mcp",
+    "crates/creative-readiness-wasm",
+]
+
+[workspace.package]
+version = "0.9.4"
+edition = "2021"
+license = "Apache-2.0"
+rust-version = "1.88"
+repository = "https://github.com/aleksUIX/creative-readiness"
+authors = ["Aleks <aleks@vastlint.org>"]
+
+[workspace.dependencies]
+creative-readiness-core = { path = "crates/creative-readiness-core" }
+creative-readiness-ama = { path = "crates/creative-readiness-ama" }
+creative-readiness-probe = { path = "crates/creative-readiness-probe" }
+vastlint-core = "=0.14.0"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+clap = { version = "4", features = ["derive"] }
+time = { version = "0.3", features = ["formatting", "serde", "parsing"] }
+sha2 = "0.10"

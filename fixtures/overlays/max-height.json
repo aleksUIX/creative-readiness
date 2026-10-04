@@ -1,0 +1,11 @@
+{
+  "id": "max-height",
+  "requirements": [
+    {
+      "id": "size.max-h",
+      "kind": "max_height",
+      "max": 1080,
+      "message": "this overlay requires a MediaFile at most 1080 pixels tall. Missing MediaFile or height fails closed. Joins sibling max_width on one MediaFile. Builtin packs do not pin a MediaFile height cap."
+    }
+  ]
+}

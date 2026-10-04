@@ -1,0 +1,10 @@
+{
+  "id": "closed-caption-https",
+  "requirements": [
+    {
+      "id": "caption.https",
+      "kind": "closed_caption_https",
+      "message": "this overlay requires ClosedCaptionFile URLs to be HTTPS when present. Builtin packs do not add this kind."
+    }
+  ]
+}

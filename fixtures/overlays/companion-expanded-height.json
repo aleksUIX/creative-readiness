@@ -1,0 +1,11 @@
+{
+  "id": "companion-expanded-height",
+  "requirements": [
+    {
+      "id": "companion.expanded-height",
+      "kind": "min_companion_expanded_height",
+      "min": 500,
+      "message": "this overlay requires a Companion expandedHeight of at least 500 pixels. Missing Companion or expandedHeight fails closed. Builtin packs do not require expanded companions."
+    }
+  ]
+}

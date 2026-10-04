@@ -1,0 +1,9 @@
+{
+  "pattern": "C",
+  "treatment": "serve",
+  "won": true,
+  "pack": "none",
+  "identity": {
+    "crid": "bid-win-serve"
+  }
+}

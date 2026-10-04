@@ -1,0 +1,11 @@
+{
+  "id": "mediafile-filesize",
+  "requirements": [
+    {
+      "id": "mf.fs",
+      "kind": "mediafile_filesize",
+      "values": ["1000000"],
+      "message": "this overlay requires MediaFile fileSize 1000000. Missing MediaFile or fileSize fails closed. Distinct from the W10 min_mediafile_file_size bound. Builtin packs do not pin MediaFile fileSize."
+    }
+  ]
+}

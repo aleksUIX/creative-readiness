@@ -1,0 +1,10 @@
+{
+  "id": "icon-clickfallback-https",
+  "requirements": [
+    {
+      "id": "icon.fallback",
+      "kind": "icon_clickfallback_https",
+      "message": "this overlay requires IconClickFallbackImage URLs to be HTTPS when present. Missing IconClickFallbackImage passes. Builtin packs do not require IconClickFallbackImage."
+    }
+  ]
+}

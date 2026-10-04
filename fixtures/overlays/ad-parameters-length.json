@@ -1,0 +1,11 @@
+{
+  "id": "ad-parameters-length",
+  "requirements": [
+    {
+      "id": "adparameters.min",
+      "kind": "min_ad_parameters_length",
+      "min": 8,
+      "message": "this overlay requires AdParameters to be at least eight characters. Builtin packs do not require AdParameters."
+    }
+  ]
+}

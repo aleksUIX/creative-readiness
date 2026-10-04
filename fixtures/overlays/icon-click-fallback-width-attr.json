@@ -1,0 +1,11 @@
+{
+  "id": "icon-click-fallback-width-attr",
+  "requirements": [
+    {
+      "id": "icfb.w",
+      "kind": "icon_click_fallback_width",
+      "values": ["20"],
+      "message": "this overlay requires IconClickFallbackImage width 20. Missing IconClickFallbackImage or width fails closed. Distinct from the W10 min_icon_click_fallback_width bound. Builtin packs do not pin IconClickFallbackImage width."
+    }
+  ]
+}

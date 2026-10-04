@@ -1,0 +1,11 @@
+{
+  "id": "ad-sequence",
+  "requirements": [
+    {
+      "id": "ad.sequence",
+      "kind": "ad_sequence",
+      "values": ["1"],
+      "message": "this overlay requires Ad sequence 1. Builtin packs do not require Ad sequence numbers."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "expires",
+  "requirements": [
+    {
+      "id": "exp.txt",
+      "kind": "expires",
+      "values": ["3600"],
+      "message": "this overlay requires Expires 3600. Missing Expires fails closed. Builtin packs do not pin Expires text."
+    }
+  ]
+}

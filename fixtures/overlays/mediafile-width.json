@@ -1,0 +1,11 @@
+{
+  "id": "mediafile-width",
+  "requirements": [
+    {
+      "id": "mf.w",
+      "kind": "mediafile_width",
+      "values": ["640"],
+      "message": "this overlay requires MediaFile width 640. Missing MediaFile or width fails closed. Distinct from the W10 min_width and max_width bounds. Builtin packs do not pin MediaFile width."
+    }
+  ]
+}

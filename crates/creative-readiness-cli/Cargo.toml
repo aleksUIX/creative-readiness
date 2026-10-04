@@ -1,0 +1,20 @@
+[package]
+name = "creative-readiness-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+description = "CLI for creative-readiness-core"
+repository.workspace = true
+
+[[bin]]
+name = "creative-readiness"
+path = "src/main.rs"
+
+[dependencies]
+creative-readiness-core.workspace = true
+creative-readiness-ama.workspace = true
+creative-readiness-probe = { path = "../creative-readiness-probe" }
+clap.workspace = true
+serde.workspace = true
+serde_json.workspace = true

@@ -1,0 +1,11 @@
+{
+  "id": "clickthrough",
+  "requirements": [
+    {
+      "id": "clk.url",
+      "kind": "clickthrough",
+      "values": ["https://t.example.com/click"],
+      "message": "this overlay requires ClickThrough https://t.example.com/click. Missing ClickThrough fails closed. Builtin packs do not pin ClickThrough URLs."
+    }
+  ]
+}

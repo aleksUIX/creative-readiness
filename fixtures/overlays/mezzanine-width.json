@@ -1,0 +1,11 @@
+{
+  "id": "mezzanine-width",
+  "requirements": [
+    {
+      "id": "mezz.width",
+      "kind": "min_mezzanine_width",
+      "min": 1920,
+      "message": "this overlay requires a Mezzanine at least 1920 pixels wide. Missing Mezzanine or width fails closed. Builtin packs do not require Mezzanine size."
+    }
+  ]
+}

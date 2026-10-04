@@ -1,0 +1,10 @@
+{
+  "id": "tracking-https",
+  "requirements": [
+    {
+      "id": "track.https",
+      "kind": "tracking_https",
+      "message": "this overlay requires Tracking URLs to be HTTPS when present. Missing Tracking passes. Builtin packs require quartile event names, not Tracking HTTPS as a separate kind."
+    }
+  ]
+}

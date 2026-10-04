@@ -1,0 +1,10 @@
+{
+  "id": "wrapper-https",
+  "requirements": [
+    {
+      "id": "wrapper.https",
+      "kind": "wrapper_https",
+      "message": "this overlay requires every VASTAdTagURI to be HTTPS. InLine VAST with no wrapper hop passes. Builtin packs do not bound wrapper hops this way."
+    }
+  ]
+}

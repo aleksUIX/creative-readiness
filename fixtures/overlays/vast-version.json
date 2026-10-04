@@ -1,0 +1,11 @@
+{
+  "id": "vast-version",
+  "requirements": [
+    {
+      "id": "vast.version",
+      "kind": "vast_version",
+      "values": ["4.2"],
+      "message": "this overlay requires VAST version 4.2. Builtin packs do not pin a VAST version."
+    }
+  ]
+}

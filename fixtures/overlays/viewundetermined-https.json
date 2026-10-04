@@ -1,0 +1,10 @@
+{
+  "id": "viewundetermined-https",
+  "requirements": [
+    {
+      "id": "vu.https",
+      "kind": "viewundetermined_https",
+      "message": "this overlay requires every ViewUndetermined URL to be HTTPS when ViewUndetermined is present. Missing ViewUndetermined passes. Builtin packs do not pin ViewUndetermined HTTPS as a separate kind."
+    }
+  ]
+}

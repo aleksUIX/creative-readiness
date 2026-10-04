@@ -1,0 +1,10 @@
+{
+  "id": "iframe-resource-https",
+  "requirements": [
+    {
+      "id": "iframe.https",
+      "kind": "iframe_resource_https",
+      "message": "this overlay requires IFrameResource URLs to be HTTPS when present. Missing IFrameResource passes. Builtin packs do not require IFrameResource."
+    }
+  ]
+}

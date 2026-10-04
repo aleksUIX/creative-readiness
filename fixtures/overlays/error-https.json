@@ -1,0 +1,10 @@
+{
+  "id": "error-https",
+  "requirements": [
+    {
+      "id": "error.https",
+      "kind": "error_https",
+      "message": "this overlay requires at least one HTTPS Error URL, and every Error URL must be HTTPS. Builtin packs do not require Error."
+    }
+  ]
+}

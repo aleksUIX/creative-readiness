@@ -1,0 +1,11 @@
+{
+  "id": "error",
+  "requirements": [
+    {
+      "id": "err.url",
+      "kind": "error",
+      "values": ["https://t.example.com/error"],
+      "message": "this overlay requires Error https://t.example.com/error. Missing Error fails closed. Builtin packs do not pin Error URLs."
+    }
+  ]
+}

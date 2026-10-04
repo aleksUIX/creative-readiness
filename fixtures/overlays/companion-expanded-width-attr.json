@@ -1,0 +1,11 @@
+{
+  "id": "companion-expanded-width-attr",
+  "requirements": [
+    {
+      "id": "comp.ew",
+      "kind": "companion_expanded_width",
+      "values": ["600"],
+      "message": "this overlay requires Companion expandedWidth 600. Missing Companion or expandedWidth fails closed. Distinct from the W10 min_companion_expanded_width bound. Builtin packs do not pin Companion expandedWidth."
+    }
+  ]
+}

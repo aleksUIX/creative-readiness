@@ -1,0 +1,10 @@
+{
+  "id": "icon-viewtracking-https",
+  "requirements": [
+    {
+      "id": "icon.viewtracking",
+      "kind": "icon_viewtracking_https",
+      "message": "this overlay requires IconViewTracking URLs to be HTTPS when present. Missing IconViewTracking passes. Builtin packs do not require IconViewTracking."
+    }
+  ]
+}

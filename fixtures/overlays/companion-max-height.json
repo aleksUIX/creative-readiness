@@ -1,0 +1,11 @@
+{
+  "id": "companion-max-height",
+  "requirements": [
+    {
+      "id": "comp.max-h",
+      "kind": "max_companion_height",
+      "max": 250,
+      "message": "this overlay requires a Companion at most 250 pixels tall. Missing Companion or height fails closed. Joins sibling min Companion size and sibling max_companion_width on one Companion. Distinct from min_companion_height. Builtin packs do not pin a Companion height cap."
+    }
+  ]
+}

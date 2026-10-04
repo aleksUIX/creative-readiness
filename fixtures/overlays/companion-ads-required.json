@@ -1,0 +1,11 @@
+{
+  "id": "companion-ads-required",
+  "requirements": [
+    {
+      "id": "comp.req",
+      "kind": "companion_ads_required",
+      "values": ["all"],
+      "message": "this overlay requires CompanionAds required all. Missing CompanionAds or required fails closed. Builtin packs do not pin CompanionAds required."
+    }
+  ]
+}

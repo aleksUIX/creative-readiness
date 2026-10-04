@@ -1,0 +1,11 @@
+{
+  "id": "pricing-currency",
+  "requirements": [
+    {
+      "id": "pricing.currency",
+      "kind": "pricing_currency",
+      "values": ["USD"],
+      "message": "this overlay requires Pricing currency USD. Builtin packs do not pin a pricing currency."
+    }
+  ]
+}

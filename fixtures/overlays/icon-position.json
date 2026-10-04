@@ -1,0 +1,17 @@
+{
+  "id": "icon-position",
+  "requirements": [
+    {
+      "id": "icons.x",
+      "kind": "icon_x_position",
+      "values": ["right"],
+      "message": "this overlay requires an Icon whose xPosition is right. Builtin packs do not require icon placement."
+    },
+    {
+      "id": "icons.y",
+      "kind": "icon_y_position",
+      "values": ["top"],
+      "message": "this overlay requires an Icon whose yPosition is top. Builtin packs do not require icon placement."
+    }
+  ]
+}

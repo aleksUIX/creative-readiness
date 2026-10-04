@@ -1,0 +1,11 @@
+{
+  "id": "mediafile-id",
+  "requirements": [
+    {
+      "id": "mf.id",
+      "kind": "mediafile_id",
+      "values": ["mf-1"],
+      "message": "this overlay requires MediaFile id mf-1. Missing MediaFile id fails closed. Builtin packs do not pin MediaFile id."
+    }
+  ]
+}

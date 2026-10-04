@@ -1,0 +1,10 @@
+{
+  "id": "extension-https",
+  "requirements": [
+    {
+      "id": "ext.https",
+      "kind": "extension_https",
+      "message": "this overlay requires Extension text to start with https:// when present. Nested XML that is not an HTTPS URL fails closed. Missing Extension passes. Builtin packs do not require Extension."
+    }
+  ]
+}

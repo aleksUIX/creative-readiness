@@ -1,0 +1,50 @@
+[
+  {
+    "id": "ssai-a",
+    "pack": "live-ssai",
+    "overlays": [
+      {
+        "id": "deal-premium",
+        "deal_id": "deal-9",
+        "auction_triggered": "forbidden",
+        "requirements": []
+      }
+    ]
+  },
+  {
+    "id": "ssai-b",
+    "pack": "live-ssai",
+    "overlays": [
+      {
+        "id": "deal-premium",
+        "deal_id": "deal-9",
+        "auction_triggered": "forbidden",
+        "requirements": []
+      },
+      {
+        "id": "publisher-strict",
+        "publisher_id": "pub-1",
+        "requirements": [
+          {
+            "id": "publisher-strict.viewable-required",
+            "kind": "require_element",
+            "element": "ViewableImpression",
+            "message": "publisher overlay requires ViewableImpression on this SSAI path."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sgai",
+    "pack": "live-sgai",
+    "overlays": [
+      {
+        "id": "deal-premium",
+        "deal_id": "deal-9",
+        "auction_triggered": "forbidden",
+        "requirements": []
+      }
+    ]
+  }
+]

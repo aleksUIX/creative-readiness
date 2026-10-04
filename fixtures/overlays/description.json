@@ -1,0 +1,11 @@
+{
+  "id": "description",
+  "requirements": [
+    {
+      "id": "desc.txt",
+      "kind": "description",
+      "values": ["A test ad"],
+      "message": "this overlay requires Description A test ad. Missing Description fails closed. Builtin packs do not pin Description text."
+    }
+  ]
+}

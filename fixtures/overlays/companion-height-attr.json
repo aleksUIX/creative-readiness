@@ -1,0 +1,11 @@
+{
+  "id": "companion-height-attr",
+  "requirements": [
+    {
+      "id": "comp.h",
+      "kind": "companion_height",
+      "values": ["250"],
+      "message": "this overlay requires Companion height 250. Missing Companion or height fails closed. Distinct from the W10 min_companion_height bound. Builtin packs do not pin Companion height."
+    }
+  ]
+}

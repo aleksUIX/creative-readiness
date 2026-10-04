@@ -1,0 +1,11 @@
+{
+  "id": "executable-resource",
+  "requirements": [
+    {
+      "id": "exec.url",
+      "kind": "executable_resource",
+      "values": ["https://t.example.com/omid.exe"],
+      "message": "this overlay requires ExecutableResource https://t.example.com/omid.exe. Missing ExecutableResource fails closed. Builtin packs do not pin ExecutableResource URLs."
+    }
+  ]
+}

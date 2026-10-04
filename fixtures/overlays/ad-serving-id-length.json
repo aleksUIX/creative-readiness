@@ -1,0 +1,11 @@
+{
+  "id": "ad-serving-id-length",
+  "requirements": [
+    {
+      "id": "identity.mid-len",
+      "kind": "min_ad_serving_id_length",
+      "min": 3,
+      "message": "this overlay requires AdServingId to be at least three characters. Builtin packs only require the element."
+    }
+  ]
+}

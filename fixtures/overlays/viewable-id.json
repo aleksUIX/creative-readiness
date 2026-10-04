@@ -1,0 +1,11 @@
+{
+  "id": "viewable-id",
+  "requirements": [
+    {
+      "id": "view.elem",
+      "kind": "viewable_id",
+      "values": ["v-1"],
+      "message": "this overlay requires Viewable id v-1. Missing Viewable or id fails closed. Builtin packs do not pin Viewable id."
+    }
+  ]
+}

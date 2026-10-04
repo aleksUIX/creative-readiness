@@ -1,0 +1,11 @@
+{
+  "id": "mediafile-scalable",
+  "requirements": [
+    {
+      "id": "mf.scal",
+      "kind": "mediafile_scalable",
+      "values": ["true"],
+      "message": "this overlay requires MediaFile scalable true. Missing MediaFile or scalable fails closed. Builtin packs do not pin MediaFile scalable."
+    }
+  ]
+}

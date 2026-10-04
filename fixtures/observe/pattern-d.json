@@ -1,0 +1,9 @@
+{
+  "pattern": "D",
+  "treatment": "fallback",
+  "won": true,
+  "pack": "none",
+  "identity": {
+    "crid": "bid-win-fallback"
+  }
+}

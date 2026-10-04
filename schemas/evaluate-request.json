@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creative-readiness.dev/schemas/evaluate-request.json",
+  "title": "EvaluateRequest",
+  "description": "JSON interchange for evaluate(). Rust keeps lifetimes; this is the Go/Java/MCP contract.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["xml"],
+  "properties": {
+    "xml": {
+      "type": "string",
+      "minLength": 1,
+      "description": "VAST XML."
+    },
+    "pack": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/pack"
+    },
+    "authority_id": { "type": "string", "minLength": 1 },
+    "transaction": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/transaction"
+    },
+    "entry_path": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/entryPath"
+    },
+    "deal_id": { "type": "string", "minLength": 1 },
+    "publisher_id": { "type": "string", "minLength": 1 },
+    "event_id": { "type": "string", "minLength": 1 },
+    "device_family": { "type": "string", "minLength": 1 },
+    "content_hash": { "type": "string", "minLength": 1 },
+    "claims": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/operationalClaims"
+    },
+    "prepared_media": {
+      "$ref": "https://creative-readiness.dev/schemas/prepared-media.json"
+    },
+    "overlays": {
+      "type": "array",
+      "items": {
+        "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/policyOverlay"
+      }
+    },
+    "policy": {
+      "$ref": "https://creative-readiness.dev/schemas/policy-document.json",
+      "description": "W9 custom PolicyDocument. Wins over builtin pack requirements."
+    },
+    "policy_json": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Serialized PolicyDocument when the caller cannot nest objects."
+    },
+    "store_json": {
+      "type": "string",
+      "description": "Optional local identity store for evaluate-with-reuse."
+    }
+  }
+}

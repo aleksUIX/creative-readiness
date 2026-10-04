@@ -1,0 +1,11 @@
+{
+  "id": "mediafile-bitrate",
+  "requirements": [
+    {
+      "id": "mf.br",
+      "kind": "mediafile_bitrate",
+      "values": ["1500"],
+      "message": "this overlay requires MediaFile bitrate 1500. Missing MediaFile or bitrate fails closed. Distinct from the W10 min_bitrate bound. Builtin packs do not pin MediaFile bitrate."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "javascript-resource-https",
+  "requirements": [
+    {
+      "id": "js.https",
+      "kind": "javascript_resource_https",
+      "message": "this overlay requires JavaScriptResource URLs to be HTTPS when present. Builtin packs do not add this kind."
+    }
+  ]
+}

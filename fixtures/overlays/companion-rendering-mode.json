@@ -1,0 +1,11 @@
+{
+  "id": "companion-rendering-mode",
+  "requirements": [
+    {
+      "id": "comp.mode",
+      "kind": "companion_rendering_mode",
+      "values": ["end-card"],
+      "message": "this overlay requires Companion renderingMode end-card. Missing Companion or renderingMode fails closed. Builtin packs do not pin renderingMode."
+    }
+  ]
+}

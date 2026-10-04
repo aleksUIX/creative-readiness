@@ -1,0 +1,11 @@
+{
+  "id": "icon-xml-encoded",
+  "requirements": [
+    {
+      "id": "icon.xml",
+      "kind": "icon_xml_encoded",
+      "values": ["true"],
+      "message": "this overlay requires Icon xmlEncoded true. Missing Icon or xmlEncoded fails closed. Builtin packs do not pin Icon xmlEncoded."
+    }
+  ]
+}

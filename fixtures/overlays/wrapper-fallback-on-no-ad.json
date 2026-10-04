@@ -1,0 +1,11 @@
+{
+  "id": "wrapper-fallback-on-no-ad",
+  "requirements": [
+    {
+      "id": "wrap.fallback",
+      "kind": "wrapper_fallback_on_no_ad",
+      "values": ["false"],
+      "message": "this overlay requires Wrapper fallbackOnNoAd false. Missing Wrapper or fallbackOnNoAd fails closed. Builtin packs do not pin Wrapper fallbackOnNoAd."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "nonlinear-expanded-width",
+  "requirements": [
+    {
+      "id": "nl.expanded-width",
+      "kind": "min_nonlinear_expanded_width",
+      "min": 600,
+      "message": "this overlay requires a NonLinear expandedWidth of at least 600 pixels. Missing NonLinear or expandedWidth fails closed. Builtin packs do not require expanded NonLinear size."
+    }
+  ]
+}

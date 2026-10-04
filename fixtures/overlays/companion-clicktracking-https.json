@@ -1,0 +1,10 @@
+{
+  "id": "companion-clicktracking-https",
+  "requirements": [
+    {
+      "id": "cctk.https",
+      "kind": "companion_clicktracking_https",
+      "message": "this overlay requires every CompanionClickTracking URL to be HTTPS when CompanionClickTracking is present. Missing CompanionClickTracking passes. Builtin packs do not pin CompanionClickTracking HTTPS as a separate kind."
+    }
+  ]
+}

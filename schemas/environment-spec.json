@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creative-readiness.dev/schemas/environment-spec.json",
+  "title": "EnvironmentSpec",
+  "description": "Input to evaluate_paths: one named path, one pack, overlays in deal-then-publisher order.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "pack"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "pack": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/pack"
+    },
+    "overlays": {
+      "type": "array",
+      "items": {
+        "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/policyOverlay"
+      }
+    }
+  }
+}

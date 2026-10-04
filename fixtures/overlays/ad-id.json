@@ -1,0 +1,11 @@
+{
+  "id": "ad-id",
+  "requirements": [
+    {
+      "id": "ad.id",
+      "kind": "ad_id",
+      "values": ["1"],
+      "message": "this overlay requires Ad id 1. Builtin packs do not pin Ad id."
+    }
+  ]
+}

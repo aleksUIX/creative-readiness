@@ -1,0 +1,11 @@
+{
+  "id": "closed-caption-file",
+  "requirements": [
+    {
+      "id": "cc.url",
+      "kind": "closed_caption_file",
+      "values": ["https://cdn.example.com/cap.vtt"],
+      "message": "this overlay requires ClosedCaptionFile https://cdn.example.com/cap.vtt. Missing ClosedCaptionFile fails closed. Builtin packs do not pin ClosedCaptionFile URLs."
+    }
+  ]
+}

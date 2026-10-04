@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creative-readiness.dev/schemas/delivery-environment.json",
+  "title": "DeliveryEnvironment",
+  "description": "Named execution context. Not the internet. One platform may expose many environments.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "architecture"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "architecture": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/architecture"
+    },
+    "pack": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/pack"
+    },
+    "streaming_platform": { "type": "string", "minLength": 1 },
+    "ssai_vendor": { "type": "string", "minLength": 1 },
+    "sgai_vendor": { "type": "string", "minLength": 1 },
+    "device_family": { "type": "string", "minLength": 1 },
+    "manifest_protocol": {
+      "type": "string",
+      "enum": ["hls", "dash", "smooth", "other"]
+    },
+    "event_infrastructure": {
+      "type": "boolean",
+      "description": "True when this environment is wired for live-event concurrency."
+    }
+  }
+}

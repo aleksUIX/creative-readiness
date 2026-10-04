@@ -1,0 +1,10 @@
+{
+  "id": "companion-clickthrough-https",
+  "requirements": [
+    {
+      "id": "companion.clickthrough",
+      "kind": "companion_clickthrough_https",
+      "message": "this overlay requires CompanionClickThrough URLs to be HTTPS when present. Missing CompanionClickThrough passes. Builtin packs do not require CompanionClickThrough."
+    }
+  ]
+}

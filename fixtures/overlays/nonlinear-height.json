@@ -1,0 +1,11 @@
+{
+  "id": "nonlinear-height",
+  "requirements": [
+    {
+      "id": "nl.height",
+      "kind": "min_nonlinear_height",
+      "min": 250,
+      "message": "this overlay requires a NonLinear at least 250 pixels tall. Missing NonLinear or height fails closed. Builtin packs do not require NonLinear size."
+    }
+  ]
+}

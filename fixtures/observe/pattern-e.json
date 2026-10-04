@@ -1,0 +1,9 @@
+{
+  "pattern": "E",
+  "treatment": "reject",
+  "won": true,
+  "pack": "live-ssai",
+  "identity": {
+    "crid": "bid-win-reject"
+  }
+}

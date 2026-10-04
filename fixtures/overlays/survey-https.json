@@ -1,0 +1,10 @@
+{
+  "id": "survey-https",
+  "requirements": [
+    {
+      "id": "survey.https",
+      "kind": "survey_https",
+      "message": "this overlay requires every Survey URL to be HTTPS when Survey is present. Missing Survey passes. Builtin packs do not require Survey."
+    }
+  ]
+}

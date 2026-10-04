@@ -1,0 +1,11 @@
+{
+  "id": "universal-ad-id",
+  "requirements": [
+    {
+      "id": "uad.id",
+      "kind": "universal_ad_id",
+      "values": ["ABCD1234567"],
+      "message": "this overlay requires UniversalAdId text ABCD1234567. Builtin packs require a nonempty UniversalAdId, not a pinned id value."
+    }
+  ]
+}

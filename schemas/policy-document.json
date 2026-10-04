@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creative-readiness.dev/schemas/policy-document.json",
+  "title": "PolicyDocument",
+  "description": "Machine-readable requirements for one delivery architecture. Defaults are provisional until the WG closes W10/W20.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "version", "requirements"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "version": { "type": "string", "minLength": 1 },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Optional pack expiry. Distinct from evidence.expires_at."
+    },
+    "architecture": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/architecture"
+    },
+    "authority": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/authority",
+      "description": "Who publishes this policy pack."
+    },
+    "proactive_required": {
+      "type": "boolean",
+      "description": "High-concurrency inventory may forbid skipping prep. observe() still records."
+    },
+    "unknown_creative_treatment": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/unknownCreativeTreatment"
+    },
+    "transformation_rights": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/transformationRights"
+    },
+    "invalidation_rules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/invalidationRule"
+      }
+    },
+    "transcode_ladder": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/transcodeLadder"
+    },
+    "environments": {
+      "type": "array",
+      "description": "Named execution contexts this pack applies to.",
+      "items": {
+        "$ref": "https://creative-readiness.dev/schemas/delivery-environment.json"
+      }
+    },
+    "overlays": {
+      "type": "array",
+      "description": "Publisher, deal, event, or device overlays bundled with the pack.",
+      "items": {
+        "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/policyOverlay"
+      }
+    },
+    "requirements": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/requirement"
+      }
+    }
+  }
+}

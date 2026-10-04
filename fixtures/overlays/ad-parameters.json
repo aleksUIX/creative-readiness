@@ -1,0 +1,11 @@
+{
+  "id": "ad-parameters",
+  "requirements": [
+    {
+      "id": "params.txt",
+      "kind": "ad_parameters",
+      "values": ["foo=1"],
+      "message": "this overlay requires AdParameters foo=1. Missing AdParameters fails closed. Builtin packs do not pin AdParameters text."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "category",
+  "requirements": [
+    {
+      "id": "cat.name",
+      "kind": "category",
+      "values": ["IAB1-1"],
+      "message": "this overlay requires Category text IAB1-1. Builtin packs do not pin a Category code."
+    }
+  ]
+}

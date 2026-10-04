@@ -1,0 +1,11 @@
+{
+  "id": "impression-id",
+  "requirements": [
+    {
+      "id": "imp.id",
+      "kind": "impression_id",
+      "values": ["imp-1"],
+      "message": "this overlay requires Impression id imp-1. Missing Impression or id fails closed. Builtin packs do not pin Impression id."
+    }
+  ]
+}

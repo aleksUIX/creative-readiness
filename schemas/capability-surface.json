@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creative-readiness.dev/schemas/capability-surface.json",
+  "title": "CapabilitySurface",
+  "description": "Option C. What any ingest/review API must be able to express. AMA is one adapter onto this surface.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "submit_or_reference",
+    "known_creative_lookup",
+    "validation_context_id",
+    "requirement_discovery",
+    "identity_version",
+    "multi_authority_status",
+    "lifecycle_states",
+    "structured_failure",
+    "readiness_retrieval",
+    "deal_publisher_environment",
+    "update_revalidation",
+    "eligibility",
+    "last_minute_diff",
+    "prebid_gate",
+    "openrtb_lite_observe",
+    "overlay_select",
+    "fallback_lookup",
+    "review_queue"
+  ],
+  "properties": {
+    "submit_or_reference": { "type": "boolean" },
+    "known_creative_lookup": { "type": "boolean" },
+    "validation_context_id": { "type": "boolean" },
+    "requirement_discovery": { "type": "boolean" },
+    "identity_version": { "type": "boolean" },
+    "multi_authority_status": { "type": "boolean" },
+    "lifecycle_states": {
+      "type": "array",
+      "minItems": 9,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/lifecycle"
+      }
+    },
+    "structured_failure": { "type": "boolean" },
+    "readiness_retrieval": { "type": "boolean" },
+    "deal_publisher_environment": { "type": "boolean" },
+    "update_revalidation": { "type": "boolean" },
+    "eligibility": { "type": "boolean" },
+    "last_minute_diff": { "type": "boolean" },
+    "prebid_gate": { "type": "boolean" },
+    "openrtb_lite_observe": { "type": "boolean" },
+    "overlay_select": { "type": "boolean" },
+    "fallback_lookup": { "type": "boolean" },
+    "review_queue": { "type": "boolean" }
+  }
+}

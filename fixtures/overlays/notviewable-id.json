@@ -1,0 +1,11 @@
+{
+  "id": "notviewable-id",
+  "requirements": [
+    {
+      "id": "nv.id",
+      "kind": "notviewable_id",
+      "values": ["nv-1"],
+      "message": "this overlay requires NotViewable id nv-1. Missing NotViewable or id fails closed. Builtin packs do not pin NotViewable id."
+    }
+  ]
+}

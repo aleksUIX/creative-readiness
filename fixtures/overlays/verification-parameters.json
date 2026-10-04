@@ -1,0 +1,11 @@
+{
+  "id": "verification-parameters",
+  "requirements": [
+    {
+      "id": "vp.url",
+      "kind": "verification_parameters",
+      "values": ["https://t.example.com/omid"],
+      "message": "this overlay requires VerificationParameters https://t.example.com/omid. Missing VerificationParameters fails closed. Builtin packs do not pin VerificationParameters URLs."
+    }
+  ]
+}

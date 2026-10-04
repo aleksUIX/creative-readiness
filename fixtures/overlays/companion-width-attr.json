@@ -1,0 +1,11 @@
+{
+  "id": "companion-width-attr",
+  "requirements": [
+    {
+      "id": "comp.w",
+      "kind": "companion_width",
+      "values": ["300"],
+      "message": "this overlay requires Companion width 300. Missing Companion or width fails closed. Distinct from the W10 min_companion_width bound. Builtin packs do not pin Companion width."
+    }
+  ]
+}

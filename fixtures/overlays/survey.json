@@ -1,0 +1,11 @@
+{
+  "id": "survey",
+  "requirements": [
+    {
+      "id": "surv.url",
+      "kind": "survey",
+      "values": ["https://t.example.com/survey"],
+      "message": "this overlay requires Survey https://t.example.com/survey. Missing Survey fails closed. Builtin packs do not pin Survey URLs."
+    }
+  ]
+}

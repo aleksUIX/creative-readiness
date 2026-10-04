@@ -1,0 +1,11 @@
+{
+  "id": "ad-title",
+  "requirements": [
+    {
+      "id": "title.txt",
+      "kind": "ad_title",
+      "values": ["Test"],
+      "message": "this overlay requires AdTitle Test. Missing AdTitle fails closed. Builtin packs do not pin AdTitle text."
+    }
+  ]
+}

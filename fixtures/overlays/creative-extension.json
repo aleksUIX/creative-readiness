@@ -1,0 +1,11 @@
+{
+  "id": "creative-extension",
+  "requirements": [
+    {
+      "id": "cext.url",
+      "kind": "creative_extension",
+      "values": ["https://t.example.com/cext"],
+      "message": "this overlay requires CreativeExtension https://t.example.com/cext. Missing CreativeExtension fails closed. Builtin packs do not pin CreativeExtension URLs."
+    }
+  ]
+}

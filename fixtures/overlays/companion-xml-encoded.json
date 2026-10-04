@@ -1,0 +1,11 @@
+{
+  "id": "companion-xml-encoded",
+  "requirements": [
+    {
+      "id": "comp.xml",
+      "kind": "companion_xml_encoded",
+      "values": ["true"],
+      "message": "this overlay requires Companion xmlEncoded true. Missing Companion or xmlEncoded fails closed. Builtin packs do not pin xmlEncoded."
+    }
+  ]
+}

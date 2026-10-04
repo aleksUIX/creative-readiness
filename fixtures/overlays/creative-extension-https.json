@@ -1,0 +1,10 @@
+{
+  "id": "creative-extension-https",
+  "requirements": [
+    {
+      "id": "cext.https",
+      "kind": "creative_extension_https",
+      "message": "this overlay requires CreativeExtension text to start with https:// when present. Nested XML that is not an HTTPS URL fails closed. Missing CreativeExtension passes. Builtin packs do not require CreativeExtension."
+    }
+  ]
+}

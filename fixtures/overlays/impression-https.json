@@ -1,0 +1,10 @@
+{
+  "id": "impression-https",
+  "requirements": [
+    {
+      "id": "impression.https",
+      "kind": "impression_https",
+      "message": "this overlay requires every Impression URL to be HTTPS. Builtin packs do not add a separate Impression HTTPS kind beyond media_https."
+    }
+  ]
+}

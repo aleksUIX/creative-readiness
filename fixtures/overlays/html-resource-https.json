@@ -1,0 +1,10 @@
+{
+  "id": "html-resource-https",
+  "requirements": [
+    {
+      "id": "html.https",
+      "kind": "html_resource_https",
+      "message": "this overlay requires HTMLResource text to start with https:// when HTMLResource is present. Inline HTML that is not an HTTPS URL fails closed. Builtin packs do not add this kind."
+    }
+  ]
+}

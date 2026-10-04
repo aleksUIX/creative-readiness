@@ -1,0 +1,10 @@
+{
+  "id": "flash-resource-https",
+  "requirements": [
+    {
+      "id": "flash.https",
+      "kind": "flash_resource_https",
+      "message": "this overlay requires FlashResource URLs to be HTTPS when present. Missing FlashResource passes. Builtin packs do not require FlashResource."
+    }
+  ]
+}

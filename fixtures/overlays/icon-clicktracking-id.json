@@ -1,0 +1,11 @@
+{
+  "id": "icon-clicktracking-id",
+  "requirements": [
+    {
+      "id": "ictk.id",
+      "kind": "icon_clicktracking_id",
+      "values": ["ictk-1"],
+      "message": "this overlay requires IconClickTracking id ictk-1. Missing IconClickTracking or id fails closed. Builtin packs do not pin IconClickTracking id."
+    }
+  ]
+}

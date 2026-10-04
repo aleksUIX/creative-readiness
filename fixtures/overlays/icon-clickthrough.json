@@ -1,0 +1,11 @@
+{
+  "id": "icon-clickthrough",
+  "requirements": [
+    {
+      "id": "ict.url",
+      "kind": "icon_clickthrough",
+      "values": ["https://adv.example.com/i"],
+      "message": "this overlay requires IconClickThrough https://adv.example.com/i. Missing IconClickThrough fails closed. Builtin packs do not pin IconClickThrough URLs."
+    }
+  ]
+}

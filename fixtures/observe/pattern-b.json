@@ -1,0 +1,9 @@
+{
+  "pattern": "B",
+  "treatment": "defer",
+  "won": true,
+  "pack": "none",
+  "identity": {
+    "crid": "bid-win-1"
+  }
+}

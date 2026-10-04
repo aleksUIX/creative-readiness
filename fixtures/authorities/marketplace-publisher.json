@@ -1,0 +1,16 @@
+[
+  {
+    "id": "marketplace",
+    "role": "marketplace",
+    "acts_on_behalf_of": ["pub-1"],
+    "pack": "live-sgai",
+    "overlays": []
+  },
+  {
+    "id": "pub-1",
+    "role": "publisher",
+    "acts_on_behalf_of": [],
+    "pack": "live-ssai",
+    "overlays": []
+  }
+]

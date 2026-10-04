@@ -1,0 +1,12 @@
+{
+  "id": "publisher-strict",
+  "publisher_id": "pub-1",
+  "requirements": [
+    {
+      "id": "publisher-strict.viewable-required",
+      "kind": "require_element",
+      "element": "ViewableImpression",
+      "message": "publisher overlay requires ViewableImpression on this SSAI path."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "ad-system",
+  "requirements": [
+    {
+      "id": "adsystem.name",
+      "kind": "ad_system",
+      "values": ["Test"],
+      "message": "this overlay requires AdSystem text Test. Builtin packs do not pin an ad-system name."
+    }
+  ]
+}

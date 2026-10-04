@@ -1,0 +1,11 @@
+{
+  "id": "tracking-offset",
+  "requirements": [
+    {
+      "id": "trk.off",
+      "kind": "tracking_offset",
+      "values": ["00:00:15"],
+      "message": "this overlay requires Tracking offset 00:00:15. Missing Tracking or offset fails closed. Builtin packs do not pin Tracking offset."
+    }
+  ]
+}

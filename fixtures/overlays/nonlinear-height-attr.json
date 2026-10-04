@@ -1,0 +1,11 @@
+{
+  "id": "nonlinear-height-attr",
+  "requirements": [
+    {
+      "id": "nl.h",
+      "kind": "nonlinear_height",
+      "values": ["250"],
+      "message": "this overlay requires NonLinear height 250. Missing NonLinear or height fails closed. Distinct from the W10 min_nonlinear_height bound. Builtin packs do not pin NonLinear height."
+    }
+  ]
+}

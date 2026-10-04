@@ -1,0 +1,161 @@
+{
+  "id": "live-hybrid",
+  "version": "0.2.11",
+  "architecture": "hybrid",
+  "authority": { "id": "provisional", "role": "other" },
+  "environments": [
+    {
+      "id": "live-hybrid",
+      "architecture": "hybrid",
+      "event_infrastructure": true
+    }
+  ],
+  "proactive_required": true,
+  "unknown_creative_treatment": "informational",
+  "transformation_rights": {
+    "inherit_on_encode": true,
+    "mint_on_media_replacement": true
+  },
+  "invalidation_rules": [
+    {
+      "id": "provisional.tracking-only",
+      "when": "tracking_only",
+      "action": "keep_transcode"
+    },
+    {
+      "id": "provisional.media-change",
+      "when": "media_change",
+      "action": "invalidate_technical_operational"
+    },
+    {
+      "id": "provisional.wrapper-change",
+      "when": "wrapper_change",
+      "action": "revaluate_technical"
+    },
+    {
+      "id": "provisional.emergency-pull",
+      "when": "emergency_pull",
+      "action": "expire"
+    }
+  ],
+  "transcode_ladder": {
+    "id": "live-hybrid-default",
+    "packaging": "mp4",
+    "renditions": [
+      {
+        "name": "720p",
+        "width": 1280,
+        "height": 720,
+        "vcodec": "libx264"
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "live-hybrid.vpaid-forbidden",
+      "kind": "forbid_vpaid",
+      "message": "live-hybrid forbids VPAID on the server and client path."
+    },
+    {
+      "id": "live-hybrid.mezzanine-required",
+      "kind": "require_element",
+      "element": "Mezzanine",
+      "message": "live-hybrid requires a Mezzanine for the SSAI hop."
+    },
+    {
+      "id": "live-hybrid.universaladid-required",
+      "kind": "require_element",
+      "element": "UniversalAdId",
+      "message": "live-hybrid requires UniversalAdId for the SGAI hop."
+    },
+    {
+      "id": "live-hybrid.adservingid-required",
+      "kind": "require_element",
+      "element": "AdServingId",
+      "message": "live-hybrid requires AdServingId so the SGAI hop can map the prepared ad."
+    },
+    {
+      "id": "live-hybrid.media-https",
+      "kind": "media_https",
+      "message": "live-hybrid requires HTTPS MediaFile and Mezzanine URLs."
+    },
+    {
+      "id": "live-hybrid.max-duration",
+      "kind": "max_duration_seconds",
+      "max": 60,
+      "message": "live-hybrid caps Linear duration at 60 seconds."
+    },
+    {
+      "id": "live-hybrid.min-duration",
+      "kind": "min_duration_seconds",
+      "min": 6,
+      "message": "live-hybrid requires Linear duration of at least 6 seconds."
+    },
+    {
+      "id": "live-hybrid.media-type",
+      "kind": "media_type",
+      "value": "video/mp4",
+      "message": "live-hybrid requires a video/mp4 MediaFile."
+    },
+    {
+      "id": "live-hybrid.container",
+      "kind": "container",
+      "value": "mp4",
+      "message": "live-hybrid requires an mp4 MediaFile container."
+    },
+    {
+      "id": "live-hybrid.min-bitrate",
+      "kind": "min_bitrate",
+      "min": 1000,
+      "message": "live-hybrid requires a MediaFile bitrate of at least 1000 kbps."
+    },
+    {
+      "id": "live-hybrid.max-bitrate",
+      "kind": "max_bitrate",
+      "max": 20000,
+      "message": "live-hybrid caps MediaFile bitrate at 20000 kbps."
+    },
+    {
+      "id": "live-hybrid.min-width",
+      "kind": "min_width",
+      "min": 640,
+      "message": "live-hybrid requires MediaFile width of at least 640."
+    },
+    {
+      "id": "live-hybrid.min-height",
+      "kind": "min_height",
+      "min": 360,
+      "message": "live-hybrid requires MediaFile height of at least 360."
+    },
+    {
+      "id": "live-hybrid.aspect",
+      "kind": "aspect_ratio",
+      "value": "16:9",
+      "message": "live-hybrid requires a 16:9 MediaFile."
+    },
+    {
+      "id": "live-hybrid.quartile-tracking",
+      "kind": "require_tracking_events",
+      "values": ["start", "firstQuartile", "midpoint", "thirdQuartile", "complete"],
+      "message": "live-hybrid requires Linear quartile tracking events."
+    },
+    {
+      "id": "live-hybrid.avc",
+      "kind": "codec",
+      "values": ["avc1", "avc"],
+      "message": "live-hybrid requires a declared AVC video codec on MediaFile.codecs."
+    },
+    {
+      "id": "live-hybrid.aac",
+      "kind": "audio_codec",
+      "values": ["mp4a", "aac"],
+      "message": "live-hybrid requires a declared AAC audio codec on MediaFile.codecs."
+    },
+    {
+      "id": "live-hybrid.cachebusting",
+      "kind": "require_macros",
+      "values": ["CACHEBUSTING", "TIMESTAMP"],
+      "message": "live-hybrid requires CACHEBUSTING and TIMESTAMP macros on a tracking or impression URL."
+    }
+  ]
+}

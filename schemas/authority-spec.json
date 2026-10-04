@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creative-readiness.dev/schemas/authority-spec.json",
+  "title": "AuthoritySpec",
+  "description": "One validation authority and the pack it evaluates. Disagreement keeps both findings.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "role", "pack"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "role": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/authorityRole"
+    },
+    "acts_on_behalf_of": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "pack": {
+      "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/pack"
+    },
+    "overlays": {
+      "type": "array",
+      "items": {
+        "$ref": "https://creative-readiness.dev/schemas/defs.json#/$defs/policyOverlay"
+      }
+    }
+  }
+}

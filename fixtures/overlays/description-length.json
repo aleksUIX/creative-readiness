@@ -1,0 +1,11 @@
+{
+  "id": "description-length",
+  "requirements": [
+    {
+      "id": "description.min",
+      "kind": "min_description_length",
+      "min": 8,
+      "message": "this overlay requires Description to be at least eight characters. Builtin packs do not require Description."
+    }
+  ]
+}

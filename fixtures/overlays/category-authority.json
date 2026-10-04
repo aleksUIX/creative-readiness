@@ -1,0 +1,11 @@
+{
+  "id": "category-authority",
+  "requirements": [
+    {
+      "id": "category.authority",
+      "kind": "category_authority",
+      "values": ["IAB"],
+      "message": "this overlay requires Category authority IAB. Builtin packs do not pin a category authority."
+    }
+  ]
+}

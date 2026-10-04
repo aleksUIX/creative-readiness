@@ -1,0 +1,11 @@
+{
+  "id": "mezzanine-delivery",
+  "requirements": [
+    {
+      "id": "mezz.del",
+      "kind": "mezzanine_delivery",
+      "values": ["progressive"],
+      "message": "this overlay requires Mezzanine delivery progressive. Missing Mezzanine or delivery fails closed. Builtin packs do not pin Mezzanine delivery."
+    }
+  ]
+}

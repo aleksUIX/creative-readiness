@@ -1,0 +1,4 @@
+{
+  "id": "w11-expired",
+  "note": "green dimensions with expires_at in the past must fail closed"
+}

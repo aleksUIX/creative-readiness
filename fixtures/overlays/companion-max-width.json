@@ -1,0 +1,11 @@
+{
+  "id": "companion-max-width",
+  "requirements": [
+    {
+      "id": "comp.max-w",
+      "kind": "max_companion_width",
+      "max": 300,
+      "message": "this overlay requires a Companion at most 300 pixels wide. Missing Companion or width fails closed. Joins sibling min Companion size on one Companion. Distinct from min_companion_width. Builtin packs do not pin a Companion width cap."
+    }
+  ]
+}

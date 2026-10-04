@@ -1,0 +1,11 @@
+{
+  "id": "icon-max-width",
+  "requirements": [
+    {
+      "id": "icon.max-w",
+      "kind": "max_icon_width",
+      "max": 20,
+      "message": "this overlay requires an Icon at most 20 pixels wide. Missing Icon or width fails closed. Joins sibling min Icon size and sibling max_icon_height on one Icon. Distinct from min_icon_width. Builtin packs do not pin an Icon width cap."
+    }
+  ]
+}

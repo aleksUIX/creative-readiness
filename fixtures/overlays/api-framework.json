@@ -1,0 +1,11 @@
+{
+  "id": "api-framework",
+  "requirements": [
+    {
+      "id": "api.name",
+      "kind": "api_framework",
+      "values": ["omid"],
+      "message": "this overlay requires every present apiFramework on MediaFile, InteractiveCreativeFile, NonLinear, JavaScriptResource, ExecutableResource, Companion, Icon, Creative, Mezzanine, and Verification to be omid. Missing apiFramework passes. Builtin packs forbid VPAID rather than pinning an allow-list."
+    }
+  ]
+}

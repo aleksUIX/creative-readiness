@@ -1,0 +1,11 @@
+{
+  "id": "companion-asset-width-attr",
+  "requirements": [
+    {
+      "id": "comp.aw",
+      "kind": "companion_asset_width",
+      "values": ["300"],
+      "message": "this overlay requires Companion assetWidth 300. Missing Companion or assetWidth fails closed. Distinct from the W10 min_companion_asset_width bound. Builtin packs do not pin Companion assetWidth."
+    }
+  ]
+}

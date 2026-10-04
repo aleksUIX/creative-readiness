@@ -1,0 +1,11 @@
+{
+  "id": "nonlinear-width",
+  "requirements": [
+    {
+      "id": "nl.width",
+      "kind": "min_nonlinear_width",
+      "min": 300,
+      "message": "this overlay requires a NonLinear at least 300 pixels wide. Missing NonLinear or width fails closed. Builtin packs do not require NonLinear size."
+    }
+  ]
+}

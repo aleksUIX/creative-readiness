@@ -1,0 +1,11 @@
+{
+  "id": "mezzanine-maintain-aspect-ratio",
+  "requirements": [
+    {
+      "id": "mezz.mar",
+      "kind": "mezzanine_maintain_aspect_ratio",
+      "values": ["true"],
+      "message": "this overlay requires Mezzanine maintainAspectRatio true. Missing Mezzanine or maintainAspectRatio fails closed. Builtin packs do not pin Mezzanine maintainAspectRatio."
+    }
+  ]
+}

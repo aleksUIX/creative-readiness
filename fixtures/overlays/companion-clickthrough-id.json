@@ -1,0 +1,11 @@
+{
+  "id": "companion-clickthrough-id",
+  "requirements": [
+    {
+      "id": "cct.id",
+      "kind": "companion_clickthrough_id",
+      "values": ["cct-1"],
+      "message": "this overlay requires CompanionClickThrough id cct-1. Missing CompanionClickThrough or id fails closed. Builtin packs do not pin CompanionClickThrough id."
+    }
+  ]
+}

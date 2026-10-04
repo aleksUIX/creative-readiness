@@ -1,0 +1,11 @@
+{
+  "id": "companion-asset-height",
+  "requirements": [
+    {
+      "id": "companion.asset-height",
+      "kind": "min_companion_asset_height",
+      "min": 250,
+      "message": "this overlay requires a Companion assetHeight of at least 250 pixels. Missing Companion or assetHeight fails closed. Builtin packs do not require companion asset size."
+    }
+  ]
+}

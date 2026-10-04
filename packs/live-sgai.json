@@ -1,0 +1,143 @@
+{
+  "id": "live-sgai",
+  "version": "0.2.11",
+  "architecture": "sgai",
+  "authority": { "id": "provisional", "role": "other" },
+  "environments": [
+    {
+      "id": "live-sgai",
+      "architecture": "sgai",
+      "event_infrastructure": true
+    }
+  ],
+  "proactive_required": false,
+  "unknown_creative_treatment": "informational",
+  "transformation_rights": {
+    "inherit_on_encode": true,
+    "mint_on_media_replacement": true
+  },
+  "invalidation_rules": [
+    {
+      "id": "provisional.tracking-only",
+      "when": "tracking_only",
+      "action": "keep_transcode"
+    },
+    {
+      "id": "provisional.media-change",
+      "when": "media_change",
+      "action": "invalidate_technical_operational"
+    },
+    {
+      "id": "provisional.wrapper-change",
+      "when": "wrapper_change",
+      "action": "revaluate_technical"
+    },
+    {
+      "id": "provisional.emergency-pull",
+      "when": "emergency_pull",
+      "action": "expire"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "live-sgai.vpaid-forbidden",
+      "kind": "forbid_vpaid",
+      "message": "live-sgai forbids VPAID; client execution cannot rely on a VPAID MediaFile."
+    },
+    {
+      "id": "live-sgai.universaladid-required",
+      "kind": "require_element",
+      "element": "UniversalAdId",
+      "message": "live-sgai requires UniversalAdId so prepared media can be reused across players."
+    },
+    {
+      "id": "live-sgai.adservingid-required",
+      "kind": "require_element",
+      "element": "AdServingId",
+      "message": "live-sgai requires AdServingId so signaling can map the prepared ad."
+    },
+    {
+      "id": "live-sgai.media-https",
+      "kind": "media_https",
+      "message": "live-sgai requires HTTPS MediaFile URLs."
+    },
+    {
+      "id": "live-sgai.max-duration",
+      "kind": "max_duration_seconds",
+      "max": 60,
+      "message": "live-sgai caps Linear duration at 60 seconds."
+    },
+    {
+      "id": "live-sgai.min-duration",
+      "kind": "min_duration_seconds",
+      "min": 6,
+      "message": "live-sgai requires Linear duration of at least 6 seconds."
+    },
+    {
+      "id": "live-sgai.media-type",
+      "kind": "media_type",
+      "value": "video/mp4",
+      "message": "live-sgai requires a video/mp4 MediaFile."
+    },
+    {
+      "id": "live-sgai.container",
+      "kind": "container",
+      "value": "mp4",
+      "message": "live-sgai requires an mp4 MediaFile container."
+    },
+    {
+      "id": "live-sgai.min-bitrate",
+      "kind": "min_bitrate",
+      "min": 1000,
+      "message": "live-sgai requires a MediaFile bitrate of at least 1000 kbps."
+    },
+    {
+      "id": "live-sgai.max-bitrate",
+      "kind": "max_bitrate",
+      "max": 20000,
+      "message": "live-sgai caps MediaFile bitrate at 20000 kbps."
+    },
+    {
+      "id": "live-sgai.min-width",
+      "kind": "min_width",
+      "min": 640,
+      "message": "live-sgai requires MediaFile width of at least 640."
+    },
+    {
+      "id": "live-sgai.min-height",
+      "kind": "min_height",
+      "min": 360,
+      "message": "live-sgai requires MediaFile height of at least 360."
+    },
+    {
+      "id": "live-sgai.aspect",
+      "kind": "aspect_ratio",
+      "value": "16:9",
+      "message": "live-sgai requires a 16:9 MediaFile."
+    },
+    {
+      "id": "live-sgai.quartile-tracking",
+      "kind": "require_tracking_events",
+      "values": ["start", "firstQuartile", "midpoint", "thirdQuartile", "complete"],
+      "message": "live-sgai requires Linear quartile tracking events."
+    },
+    {
+      "id": "live-sgai.avc",
+      "kind": "codec",
+      "values": ["avc1", "avc"],
+      "message": "live-sgai requires a declared AVC video codec on MediaFile.codecs."
+    },
+    {
+      "id": "live-sgai.aac",
+      "kind": "audio_codec",
+      "values": ["mp4a", "aac"],
+      "message": "live-sgai requires a declared AAC audio codec on MediaFile.codecs."
+    },
+    {
+      "id": "live-sgai.cachebusting",
+      "kind": "require_macros",
+      "values": ["CACHEBUSTING", "TIMESTAMP"],
+      "message": "live-sgai requires CACHEBUSTING and TIMESTAMP macros on a tracking or impression URL."
+    }
+  ]
+}

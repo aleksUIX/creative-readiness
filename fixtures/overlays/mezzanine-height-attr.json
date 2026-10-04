@@ -1,0 +1,11 @@
+{
+  "id": "mezzanine-height-attr",
+  "requirements": [
+    {
+      "id": "mezz.h",
+      "kind": "mezzanine_height",
+      "values": ["1080"],
+      "message": "this overlay requires Mezzanine height 1080. Missing Mezzanine or height fails closed. Distinct from the W10 min_mezzanine_height bound. Builtin packs do not pin Mezzanine height."
+    }
+  ]
+}

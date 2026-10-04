@@ -1,0 +1,11 @@
+{
+  "id": "caption-file-status",
+  "requirements": [
+    {
+      "id": "cap.status",
+      "kind": "caption_file_status",
+      "values": ["onDemand"],
+      "message": "this overlay requires ClosedCaptionFile fileStatus onDemand. Missing ClosedCaptionFile or fileStatus fails closed. Builtin packs do not pin caption fileStatus."
+    }
+  ]
+}

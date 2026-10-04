@@ -1,0 +1,11 @@
+{
+  "id": "companion-width",
+  "requirements": [
+    {
+      "id": "companion.width",
+      "kind": "min_companion_width",
+      "min": 300,
+      "message": "this overlay requires a Companion at least 300 pixels wide. Builtin packs do not require companions."
+    }
+  ]
+}

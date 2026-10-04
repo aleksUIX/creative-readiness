@@ -1,0 +1,11 @@
+{
+  "id": "survey-id",
+  "requirements": [
+    {
+      "id": "surv.id",
+      "kind": "survey_id",
+      "values": ["surv-1"],
+      "message": "this overlay requires Survey id surv-1. Missing Survey or id fails closed. Builtin packs do not pin Survey id."
+    }
+  ]
+}

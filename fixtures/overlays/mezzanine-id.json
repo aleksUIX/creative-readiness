@@ -1,0 +1,11 @@
+{
+  "id": "mezzanine-id",
+  "requirements": [
+    {
+      "id": "mezz.id",
+      "kind": "mezzanine_id",
+      "values": ["mezz-1"],
+      "message": "this overlay requires Mezzanine id mezz-1. Missing Mezzanine or id fails closed. Builtin packs do not pin Mezzanine id."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "captions",
+  "requirements": [
+    {
+      "id": "captions.closed-caption-file",
+      "kind": "require_element",
+      "element": "ClosedCaptionFile",
+      "message": "this overlay requires ClosedCaptionFile so live CTV can carry captions. Builtin packs do not require it."
+    }
+  ]
+}

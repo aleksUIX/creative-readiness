@@ -1,0 +1,11 @@
+{
+  "id": "blocked-ad-categories",
+  "requirements": [
+    {
+      "id": "blocked.cat",
+      "kind": "blocked_ad_categories",
+      "values": ["IAB1-1"],
+      "message": "this overlay requires BlockedAdCategories IAB1-1. Missing BlockedAdCategories fails closed. Builtin packs do not pin BlockedAdCategories."
+    }
+  ]
+}

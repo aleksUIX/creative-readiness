@@ -1,0 +1,11 @@
+{
+  "id": "companion-asset-max-width",
+  "requirements": [
+    {
+      "id": "comp.max-aw",
+      "kind": "max_companion_asset_width",
+      "max": 400,
+      "message": "Companion assetWidth must be at most 400 pixels. Missing or invalid assetWidth fails closed. Sibling asset size bounds apply to the same Companion."
+    }
+  ]
+}

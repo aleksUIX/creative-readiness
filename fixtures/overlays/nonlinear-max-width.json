@@ -1,0 +1,11 @@
+{
+  "id": "nonlinear-max-width",
+  "requirements": [
+    {
+      "id": "nl.max-w",
+      "kind": "max_nonlinear_width",
+      "max": 300,
+      "message": "this overlay requires a NonLinear at most 300 pixels wide. Missing NonLinear or width fails closed. Joins sibling min NonLinear size and sibling max_nonlinear_height on one NonLinear. Distinct from min_nonlinear_width. Builtin packs do not pin a NonLinear width cap."
+    }
+  ]
+}

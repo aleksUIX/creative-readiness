@@ -1,0 +1,11 @@
+{
+  "id": "flash-resource-creative-type",
+  "requirements": [
+    {
+      "id": "flash.ct",
+      "kind": "flash_resource_creative_type",
+      "values": ["application/x-shockwave-flash"],
+      "message": "this overlay requires FlashResource creativeType application/x-shockwave-flash. Missing FlashResource or creativeType fails closed. Builtin packs do not pin FlashResource creativeType."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "mediafile-height",
+  "requirements": [
+    {
+      "id": "mf.h",
+      "kind": "mediafile_height",
+      "values": ["360"],
+      "message": "this overlay requires MediaFile height 360. Missing MediaFile or height fails closed. Distinct from the W10 min_height and max_height bounds. Builtin packs do not pin MediaFile height."
+    }
+  ]
+}

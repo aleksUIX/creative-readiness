@@ -1,0 +1,11 @@
+{
+  "id": "mediafile-codec",
+  "requirements": [
+    {
+      "id": "mf.codec",
+      "kind": "mediafile_codec",
+      "values": ["avc1.42E01E,mp4a.40.2"],
+      "message": "this overlay requires MediaFile codec or codecs avc1.42E01E,mp4a.40.2. Missing MediaFile or both attrs fails closed. Builtin packs use the W10 codec kind rather than pinning MediaFile codec attrs."
+    }
+  ]
+}

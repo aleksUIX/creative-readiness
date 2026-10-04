@@ -1,0 +1,10 @@
+{
+  "id": "nonlinear-clicktracking-https",
+  "requirements": [
+    {
+      "id": "nlct.https",
+      "kind": "nonlinear_clicktracking_https",
+      "message": "this overlay requires every NonLinearClickTracking URL to be HTTPS when NonLinearClickTracking is present. Missing NonLinearClickTracking passes. Builtin packs do not pin NonLinearClickTracking HTTPS as a separate kind."
+    }
+  ]
+}

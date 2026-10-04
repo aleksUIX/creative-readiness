@@ -1,0 +1,11 @@
+{
+  "id": "vast-ad-tag-uri",
+  "requirements": [
+    {
+      "id": "tag.uri",
+      "kind": "vast_ad_tag_uri",
+      "values": ["https://example.com/vast"],
+      "message": "this overlay requires VASTAdTagURI https://example.com/vast. Missing VASTAdTagURI fails closed. Builtin packs do not pin wrapper hop URLs."
+    }
+  ]
+}

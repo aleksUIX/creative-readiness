@@ -1,0 +1,11 @@
+{
+  "id": "mediafile-file-size",
+  "requirements": [
+    {
+      "id": "mf.fs",
+      "kind": "min_mediafile_file_size",
+      "min": 1000000,
+      "message": "this overlay requires a MediaFile fileSize of at least 1000000 bytes. Missing MediaFile or fileSize fails closed. Builtin packs do not require MediaFile fileSize."
+    }
+  ]
+}

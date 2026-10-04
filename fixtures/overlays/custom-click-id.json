@@ -1,0 +1,11 @@
+{
+  "id": "custom-click-id",
+  "requirements": [
+    {
+      "id": "cust.id",
+      "kind": "custom_click_id",
+      "values": ["cust-1"],
+      "message": "this overlay requires CustomClick id cust-1. Missing CustomClick or id fails closed. Builtin packs do not pin CustomClick id."
+    }
+  ]
+}

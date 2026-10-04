@@ -1,0 +1,11 @@
+{
+  "id": "min-suggested-duration",
+  "requirements": [
+    {
+      "id": "nl.msd",
+      "kind": "min_suggested_duration",
+      "values": ["00:00:15"],
+      "message": "this overlay requires NonLinear minSuggestedDuration 00:00:15. Missing NonLinear or minSuggestedDuration fails closed. Builtin packs do not pin minSuggestedDuration."
+    }
+  ]
+}

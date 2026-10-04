@@ -1,0 +1,11 @@
+{
+  "id": "verification-vendor",
+  "requirements": [
+    {
+      "id": "verification.vendor",
+      "kind": "verification_vendor",
+      "values": ["iabtechlab.com-omid"],
+      "message": "this overlay requires Verification vendor iabtechlab.com-omid. Builtin packs do not pin a verification vendor."
+    }
+  ]
+}

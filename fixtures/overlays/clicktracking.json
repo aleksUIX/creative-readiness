@@ -1,0 +1,11 @@
+{
+  "id": "clicktracking",
+  "requirements": [
+    {
+      "id": "clk.trk.url",
+      "kind": "clicktracking",
+      "values": ["https://t.example.com/clk"],
+      "message": "this overlay requires ClickTracking https://t.example.com/clk. Missing ClickTracking fails closed. Builtin packs do not pin ClickTracking URLs."
+    }
+  ]
+}

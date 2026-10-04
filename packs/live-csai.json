@@ -1,0 +1,143 @@
+{
+  "id": "live-csai",
+  "version": "0.2.11",
+  "architecture": "csai",
+  "authority": { "id": "provisional", "role": "other" },
+  "environments": [
+    {
+      "id": "live-csai",
+      "architecture": "csai",
+      "event_infrastructure": true
+    }
+  ],
+  "proactive_required": false,
+  "unknown_creative_treatment": "informational",
+  "transformation_rights": {
+    "inherit_on_encode": false,
+    "mint_on_media_replacement": true
+  },
+  "invalidation_rules": [
+    {
+      "id": "provisional.tracking-only",
+      "when": "tracking_only",
+      "action": "keep_transcode"
+    },
+    {
+      "id": "provisional.media-change",
+      "when": "media_change",
+      "action": "invalidate_technical_operational"
+    },
+    {
+      "id": "provisional.wrapper-change",
+      "when": "wrapper_change",
+      "action": "revaluate_technical"
+    },
+    {
+      "id": "provisional.emergency-pull",
+      "when": "emergency_pull",
+      "action": "expire"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "live-csai.vpaid-forbidden",
+      "kind": "forbid_vpaid",
+      "message": "live-csai forbids VPAID on this live client path."
+    },
+    {
+      "id": "live-csai.universaladid-required",
+      "kind": "require_element",
+      "element": "UniversalAdId",
+      "message": "live-csai requires UniversalAdId."
+    },
+    {
+      "id": "live-csai.adservingid-required",
+      "kind": "require_element",
+      "element": "AdServingId",
+      "message": "live-csai requires AdServingId so the mapped ad can be reused."
+    },
+    {
+      "id": "live-csai.media-https",
+      "kind": "media_https",
+      "message": "live-csai requires HTTPS MediaFile URLs."
+    },
+    {
+      "id": "live-csai.max-duration",
+      "kind": "max_duration_seconds",
+      "max": 60,
+      "message": "live-csai caps Linear duration at 60 seconds."
+    },
+    {
+      "id": "live-csai.min-duration",
+      "kind": "min_duration_seconds",
+      "min": 6,
+      "message": "live-csai requires Linear duration of at least 6 seconds."
+    },
+    {
+      "id": "live-csai.media-type",
+      "kind": "media_type",
+      "value": "video/mp4",
+      "message": "live-csai requires a video/mp4 MediaFile."
+    },
+    {
+      "id": "live-csai.container",
+      "kind": "container",
+      "value": "mp4",
+      "message": "live-csai requires an mp4 MediaFile container."
+    },
+    {
+      "id": "live-csai.min-bitrate",
+      "kind": "min_bitrate",
+      "min": 1000,
+      "message": "live-csai requires a MediaFile bitrate of at least 1000 kbps."
+    },
+    {
+      "id": "live-csai.max-bitrate",
+      "kind": "max_bitrate",
+      "max": 20000,
+      "message": "live-csai caps MediaFile bitrate at 20000 kbps."
+    },
+    {
+      "id": "live-csai.min-width",
+      "kind": "min_width",
+      "min": 640,
+      "message": "live-csai requires MediaFile width of at least 640."
+    },
+    {
+      "id": "live-csai.min-height",
+      "kind": "min_height",
+      "min": 360,
+      "message": "live-csai requires MediaFile height of at least 360."
+    },
+    {
+      "id": "live-csai.aspect",
+      "kind": "aspect_ratio",
+      "value": "16:9",
+      "message": "live-csai requires a 16:9 MediaFile."
+    },
+    {
+      "id": "live-csai.quartile-tracking",
+      "kind": "require_tracking_events",
+      "values": ["start", "firstQuartile", "midpoint", "thirdQuartile", "complete"],
+      "message": "live-csai requires Linear quartile tracking events."
+    },
+    {
+      "id": "live-csai.avc",
+      "kind": "codec",
+      "values": ["avc1", "avc"],
+      "message": "live-csai requires a declared AVC video codec on MediaFile.codecs."
+    },
+    {
+      "id": "live-csai.aac",
+      "kind": "audio_codec",
+      "values": ["mp4a", "aac"],
+      "message": "live-csai requires a declared AAC audio codec on MediaFile.codecs."
+    },
+    {
+      "id": "live-csai.cachebusting",
+      "kind": "require_macros",
+      "values": ["CACHEBUSTING", "TIMESTAMP"],
+      "message": "live-csai requires CACHEBUSTING and TIMESTAMP macros on a tracking or impression URL."
+    }
+  ]
+}

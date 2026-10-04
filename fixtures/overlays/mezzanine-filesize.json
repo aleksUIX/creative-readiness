@@ -1,0 +1,11 @@
+{
+  "id": "mezzanine-filesize",
+  "requirements": [
+    {
+      "id": "mezz.fs",
+      "kind": "mezzanine_filesize",
+      "values": ["5000000"],
+      "message": "this overlay requires Mezzanine fileSize 5000000. Missing Mezzanine or fileSize fails closed. Distinct from the W10 min_mezzanine_file_size bound. Builtin packs do not pin Mezzanine fileSize."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "tracking",
+  "requirements": [
+    {
+      "id": "trk.url",
+      "kind": "tracking",
+      "values": ["https://t.example.com/start"],
+      "message": "this overlay requires Tracking https://t.example.com/start. Missing Tracking fails closed. Builtin packs do not pin Tracking URLs."
+    }
+  ]
+}

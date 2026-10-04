@@ -1,0 +1,11 @@
+{
+  "id": "creative-extension-type",
+  "requirements": [
+    {
+      "id": "cext.type",
+      "kind": "creative_extension_type",
+      "values": ["iab"],
+      "message": "this overlay requires CreativeExtension type iab. Missing CreativeExtension or type fails closed. Builtin packs do not pin CreativeExtension type."
+    }
+  ]
+}

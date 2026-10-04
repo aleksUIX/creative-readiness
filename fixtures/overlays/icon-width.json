@@ -1,0 +1,11 @@
+{
+  "id": "icon-width",
+  "requirements": [
+    {
+      "id": "icon.w",
+      "kind": "min_icon_width",
+      "min": 20,
+      "message": "this overlay requires an Icon at least 20 pixels wide. Missing Icon or width fails closed. Builtin packs do not require Icon size."
+    }
+  ]
+}

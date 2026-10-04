@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creative-readiness.dev/schemas/openrtb-lite.json",
+  "title": "OpenRTB-lite fragment",
+  "description": "Subset of OpenRTB 2.x the module reads on observe(). Extra fields are allowed. Not a pacing engine.",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "imp": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "video": {
+            "type": "object",
+            "properties": {
+              "maxduration": { "type": "integer", "minimum": 0 },
+              "mimes": {
+                "type": "array",
+                "items": { "type": "string", "minLength": 1 }
+              }
+            }
+          }
+        }
+      }
+    },
+    "site": {
+      "type": "object",
+      "properties": {
+        "publisher": {
+          "type": "object",
+          "properties": {
+            "id": { "type": "string", "minLength": 1 }
+          }
+        }
+      }
+    },
+    "app": {
+      "type": "object",
+      "properties": {
+        "publisher": {
+          "type": "object",
+          "properties": {
+            "id": { "type": "string", "minLength": 1 }
+          }
+        }
+      }
+    },
+    "seatbid": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "bid": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "string" },
+                "crid": { "type": "string" },
+                "dealid": { "type": "string" },
+                "ext": {
+                  "type": "object",
+                  "properties": {
+                    "fallback_crid": { "type": "string", "minLength": 1 }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

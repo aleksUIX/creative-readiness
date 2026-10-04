@@ -1,0 +1,11 @@
+{
+  "id": "icon-type",
+  "requirements": [
+    {
+      "id": "icon.type",
+      "kind": "icon_type",
+      "values": ["image/png"],
+      "message": "this overlay requires Icon type image/png. Missing Icon type fails closed. Builtin packs do not pin Icon type."
+    }
+  ]
+}

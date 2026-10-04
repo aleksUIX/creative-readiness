@@ -1,0 +1,11 @@
+{
+  "id": "mezzanine-codec",
+  "requirements": [
+    {
+      "id": "mezz.codec",
+      "kind": "mezzanine_codec",
+      "values": ["avc1.42E01E"],
+      "message": "this overlay requires Mezzanine codec avc1.42E01E. Missing Mezzanine or codec fails closed. A codecs attribute can also pass. Builtin packs do not pin Mezzanine codec."
+    }
+  ]
+}

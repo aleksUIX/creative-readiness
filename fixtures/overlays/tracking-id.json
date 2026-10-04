@@ -1,0 +1,11 @@
+{
+  "id": "tracking-id",
+  "requirements": [
+    {
+      "id": "trk.id",
+      "kind": "tracking_id",
+      "values": ["trk-1"],
+      "message": "this overlay requires Tracking id trk-1. Missing Tracking or id fails closed. Builtin packs do not pin Tracking id."
+    }
+  ]
+}

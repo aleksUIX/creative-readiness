@@ -1,0 +1,11 @@
+{
+  "id": "static-resource",
+  "requirements": [
+    {
+      "id": "static.url",
+      "kind": "static_resource",
+      "values": ["https://cdn.example.com/i.png"],
+      "message": "this overlay requires StaticResource https://cdn.example.com/i.png. Missing StaticResource fails closed. Builtin packs do not pin StaticResource URLs."
+    }
+  ]
+}

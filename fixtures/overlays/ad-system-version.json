@@ -1,0 +1,11 @@
+{
+  "id": "ad-system-version",
+  "requirements": [
+    {
+      "id": "adsystem.version",
+      "kind": "ad_system_version",
+      "values": ["1.0"],
+      "message": "this overlay requires AdSystem version 1.0. Builtin packs do not require a named ad-system version."
+    }
+  ]
+}

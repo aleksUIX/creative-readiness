@@ -1,0 +1,11 @@
+{
+  "id": "error-id",
+  "requirements": [
+    {
+      "id": "err.id",
+      "kind": "error_id",
+      "values": ["err-1"],
+      "message": "this overlay requires Error id err-1. Missing Error or id fails closed. Builtin packs do not pin Error id."
+    }
+  ]
+}

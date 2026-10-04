@@ -1,0 +1,11 @@
+{
+  "id": "nonlinear-expanded-max-height",
+  "requirements": [
+    {
+      "id": "nl.max-eh",
+      "kind": "max_nonlinear_expanded_height",
+      "max": 600,
+      "message": "NonLinear expandedHeight must be at most 600 pixels. Missing or invalid expandedHeight fails closed. Sibling expanded size bounds apply to the same NonLinear."
+    }
+  ]
+}

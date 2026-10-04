@@ -1,0 +1,11 @@
+{
+  "id": "nonlinear-width-attr",
+  "requirements": [
+    {
+      "id": "nl.w",
+      "kind": "nonlinear_width",
+      "values": ["300"],
+      "message": "this overlay requires NonLinear width 300. Missing NonLinear or width fails closed. Distinct from the W10 min_nonlinear_width bound. Builtin packs do not pin NonLinear width."
+    }
+  ]
+}

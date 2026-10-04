@@ -1,0 +1,11 @@
+{
+  "id": "pricing-model",
+  "requirements": [
+    {
+      "id": "pricing.model",
+      "kind": "pricing_model",
+      "values": ["CPM"],
+      "message": "this overlay requires Pricing model CPM. Builtin packs do not pin a pricing model."
+    }
+  ]
+}

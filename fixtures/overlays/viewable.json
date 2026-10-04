@@ -1,0 +1,11 @@
+{
+  "id": "viewable",
+  "requirements": [
+    {
+      "id": "view.url",
+      "kind": "viewable",
+      "values": ["https://t.example.com/view"],
+      "message": "this overlay requires Viewable https://t.example.com/view. Missing Viewable fails closed. Builtin packs do not pin Viewable URLs."
+    }
+  ]
+}

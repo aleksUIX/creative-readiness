@@ -1,0 +1,11 @@
+{
+  "id": "icon-click-fallback-height-attr",
+  "requirements": [
+    {
+      "id": "icfb.h",
+      "kind": "icon_click_fallback_height",
+      "values": ["20"],
+      "message": "this overlay requires IconClickFallbackImage height 20. Missing IconClickFallbackImage or height fails closed. Distinct from the W10 min_icon_click_fallback_height bound. Builtin packs do not pin IconClickFallbackImage height."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "duration",
+  "requirements": [
+    {
+      "id": "dur.txt",
+      "kind": "duration",
+      "values": ["00:00:30"],
+      "message": "this overlay requires Duration 00:00:30. Missing Duration fails closed. Builtin packs do not pin Duration text."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "mezzanine-min-bitrate",
+  "requirements": [
+    {
+      "id": "mezz.br.min",
+      "kind": "min_mezzanine_bitrate",
+      "min": 1000,
+      "message": "this overlay requires a Mezzanine bitrate of at least 1000 kbps. Missing Mezzanine or bitrate fails closed. A maxBitrate attribute can also pass. Builtin packs do not pin Mezzanine bitrate."
+    }
+  ]
+}

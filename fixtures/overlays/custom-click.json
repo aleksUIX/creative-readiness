@@ -1,0 +1,11 @@
+{
+  "id": "custom-click",
+  "requirements": [
+    {
+      "id": "custom.url",
+      "kind": "custom_click",
+      "values": ["https://t.example.com/custom"],
+      "message": "this overlay requires CustomClick https://t.example.com/custom. Missing CustomClick fails closed. Builtin packs do not pin CustomClick URLs."
+    }
+  ]
+}

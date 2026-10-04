@@ -1,0 +1,11 @@
+{
+  "id": "mediafile-maintain-aspect-ratio",
+  "requirements": [
+    {
+      "id": "mf.mar",
+      "kind": "mediafile_maintain_aspect_ratio",
+      "values": ["true"],
+      "message": "this overlay requires MediaFile maintainAspectRatio true. Missing MediaFile or maintainAspectRatio fails closed. Builtin packs do not pin MediaFile maintainAspectRatio."
+    }
+  ]
+}

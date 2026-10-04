@@ -1,0 +1,11 @@
+{
+  "id": "javascript-resource",
+  "requirements": [
+    {
+      "id": "js.url",
+      "kind": "javascript_resource",
+      "values": ["https://t.example.com/omid.js"],
+      "message": "this overlay requires JavaScriptResource https://t.example.com/omid.js. Missing JavaScriptResource fails closed. Builtin packs do not pin JavaScriptResource URLs."
+    }
+  ]
+}

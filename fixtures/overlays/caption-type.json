@@ -1,0 +1,11 @@
+{
+  "id": "captions-type",
+  "requirements": [
+    {
+      "id": "captions.type",
+      "kind": "caption_type",
+      "values": ["text/vtt"],
+      "message": "this overlay requires a ClosedCaptionFile whose type is text/vtt. Builtin packs do not require captions."
+    }
+  ]
+}

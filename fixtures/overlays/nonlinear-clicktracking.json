@@ -1,0 +1,11 @@
+{
+  "id": "nonlinear-clicktracking",
+  "requirements": [
+    {
+      "id": "nlct.url",
+      "kind": "nonlinear_clicktracking",
+      "values": ["https://t.example.com/nl"],
+      "message": "this overlay requires NonLinearClickTracking https://t.example.com/nl. Missing NonLinearClickTracking fails closed. Builtin packs do not pin NonLinearClickTracking URLs."
+    }
+  ]
+}

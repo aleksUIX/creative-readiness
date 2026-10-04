@@ -1,0 +1,11 @@
+{
+  "id": "w20-wrapper",
+  "old": "ok-https-mp4.xml",
+  "new": "wrapper.xml",
+  "expect": {
+    "tracking_only": false,
+    "keep_transcode": true,
+    "invalidation_ids": ["diff.wrapper-changed"],
+    "revalidation": true
+  }
+}

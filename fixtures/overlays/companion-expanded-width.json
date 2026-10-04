@@ -1,0 +1,11 @@
+{
+  "id": "companion-expanded-width",
+  "requirements": [
+    {
+      "id": "companion.expanded-width",
+      "kind": "min_companion_expanded_width",
+      "min": 600,
+      "message": "this overlay requires a Companion expandedWidth of at least 600 pixels. Missing Companion or expandedWidth fails closed. Builtin packs do not require expanded companions."
+    }
+  ]
+}

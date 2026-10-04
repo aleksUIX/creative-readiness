@@ -1,0 +1,11 @@
+{
+  "id": "impression",
+  "requirements": [
+    {
+      "id": "imp.url",
+      "kind": "impression",
+      "values": ["https://t.example.com/imp?cb=[CACHEBUSTING]&ts=[TIMESTAMP]"],
+      "message": "this overlay requires Impression https://t.example.com/imp?cb=[CACHEBUSTING]&ts=[TIMESTAMP]. Missing Impression fails closed. Builtin packs do not pin Impression URLs."
+    }
+  ]
+}

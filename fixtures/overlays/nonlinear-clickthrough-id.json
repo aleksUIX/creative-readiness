@@ -1,0 +1,11 @@
+{
+  "id": "nonlinear-clickthrough-id",
+  "requirements": [
+    {
+      "id": "nlc.id",
+      "kind": "nonlinear_clickthrough_id",
+      "values": ["nlc-1"],
+      "message": "this overlay requires NonLinearClickThrough id nlc-1. Missing NonLinearClickThrough or id fails closed. Builtin packs do not pin NonLinearClickThrough id."
+    }
+  ]
+}

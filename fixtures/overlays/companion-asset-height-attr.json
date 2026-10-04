@@ -1,0 +1,11 @@
+{
+  "id": "companion-asset-height-attr",
+  "requirements": [
+    {
+      "id": "comp.ah",
+      "kind": "companion_asset_height",
+      "values": ["250"],
+      "message": "this overlay requires Companion assetHeight 250. Missing Companion or assetHeight fails closed. Distinct from the W10 min_companion_asset_height bound. Builtin packs do not pin Companion assetHeight."
+    }
+  ]
+}

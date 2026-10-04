@@ -1,0 +1,11 @@
+{
+  "id": "pricing",
+  "requirements": [
+    {
+      "id": "price.amt",
+      "kind": "pricing",
+      "values": ["2.50"],
+      "message": "this overlay requires Pricing text 2.50. Builtin packs do not pin a Pricing amount."
+    }
+  ]
+}

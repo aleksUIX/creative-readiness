@@ -1,0 +1,11 @@
+{
+  "id": "icon-alt-text",
+  "requirements": [
+    {
+      "id": "icon.alt",
+      "kind": "icon_alt_text",
+      "values": ["AdChoices"],
+      "message": "this overlay requires Icon altText AdChoices. Missing Icon or altText fails closed. Builtin packs do not pin Icon altText."
+    }
+  ]
+}

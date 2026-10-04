@@ -1,0 +1,11 @@
+{
+  "id": "nonlinear-xml-encoded",
+  "requirements": [
+    {
+      "id": "nl.xml",
+      "kind": "nonlinear_xml_encoded",
+      "values": ["true"],
+      "message": "this overlay requires NonLinear xmlEncoded true. Missing NonLinear or xmlEncoded fails closed. Builtin packs do not pin NonLinear xmlEncoded."
+    }
+  ]
+}

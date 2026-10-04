@@ -1,0 +1,11 @@
+{
+  "id": "companion-adslot-id",
+  "requirements": [
+    {
+      "id": "comp.slot",
+      "kind": "companion_adslot_id",
+      "values": ["slot-1"],
+      "message": "this overlay requires Companion adSlotId slot-1. Missing Companion or adSlotId fails closed. Builtin packs do not pin Companion adSlotId."
+    }
+  ]
+}
